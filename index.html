@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helena Dias — Visual &amp; UX/UI Designer</title>
+<meta name="description" content="Designer de marcas, landing pages e campanhas. Identidade visual, UX/UI e conceitos visuais com estratégia. Porto Alegre.">
+<link rel="canonical" href="https://helenadias.design/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://helenadias.design/">
+<meta property="og:title" content="Helena Dias — Visual &amp; UX/UI Designer">
+<meta property="og:description" content="Identidade visual, landing pages, UX/UI e campanhas. Portfólio com cases reais. Porto Alegre.">
+<meta property="og:image" content="https://helenadias.design/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f1ec; --ink:#121212; --muted:#6b6862; --line:#d9d5cc;
+  --accent:#c4121a; --card:#e6e2d9;
+  --pad:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.serif{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic}
+
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:20;color:#fff;border-bottom:1px solid transparent;transition:background .35s,color .35s,border-color .35s}
+header.solid,header.menu-open{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);color:var(--ink);border-bottom-color:var(--line)}
+section[id]{scroll-margin-top:70px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px var(--pad)}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:500;font-size:15px;transition:background .2s}
+.btn:hover{background:var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.menu-btn{font:inherit;font-size:15px;font-weight:500;cursor:pointer;color:inherit;background:transparent;border:1px solid currentColor;border-radius:999px;padding:11px 18px;transition:background .2s,color .2s,border-color .2s}
+header:not(.solid):not(.menu-open) .menu-btn{border-color:#ffffffb3}
+.menu-btn:hover{background:#fff;color:#121212;border-color:#fff}
+header.solid .menu-btn:hover,header.menu-open .menu-btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);color:var(--ink);padding:24px var(--pad) 36px;border-bottom:1px solid var(--line);gap:6px}
+.links.open{display:flex}
+.links a{font-size:clamp(28px,4vw,48px);font-weight:600;letter-spacing:-.03em;line-height:1.15}
+.links a:hover{color:var(--accent)}
+.links .links-cv{font-size:16px;font-weight:500;letter-spacing:0;margin-top:18px;color:var(--muted)}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;min-height:100svh;color:#fff;background:#3d0302;display:flex;flex-direction:column;justify-content:space-between;gap:40px;padding:clamp(96px,14vh,140px) var(--pad) clamp(12px,2vw,28px);overflow:hidden}
+.hero-media{position:absolute;inset:0;z-index:0}
+.hero-media picture{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero-ph{position:absolute;inset:0;display:grid;place-items:center;color:#ffffff55;font-size:14px;background:radial-gradient(ellipse at 50% 35%,#5a4a42 0%,#1d1817 60%,#100e0d 100%)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(0,0,0,.35) 0%,rgba(0,0,0,0) 28%,rgba(0,0,0,0) 50%,rgba(20,0,0,.78) 100%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.22;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-top,.hero h1{position:relative;z-index:3}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:32px}
+.hero-services{list-style:none;font-weight:600;font-size:clamp(17px,1.7vw,22px);line-height:1.12;letter-spacing:-.01em}
+.hero-side{max-width:360px}
+.hero-side p{font-weight:500;font-size:clamp(16px,1.5vw,20px);line-height:1.28;text-wrap:balance}
+.hero .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn.light{background:#fff;color:#121212}
+.btn.light:hover{background:var(--accent);color:#fff}
+.btn.ghost-light{background:transparent;color:#fff;border:1px solid #ffffffb3}
+.btn.ghost-light:hover{background:#fff;color:#121212}
+.hero h1{font-size:min(11.4vw,176px);line-height:.88;letter-spacing:-.05em;font-weight:800;text-transform:uppercase}
+.hero h1 .l{display:block;white-space:nowrap}
+.hero h1 .l2{text-align:right}
+.hero h1 .serif{text-transform:none;letter-spacing:0;font-weight:400}
+@media(max-width:820px){
+  .hero-top{flex-direction:column;gap:24px}
+  .hero-side{max-width:none}
+  .hero-side p{max-width:32ch}
+  .hero h1 .l2{text-align:left}
+  .hero h1{font-size:calc((100vw - 32px) / 7.7)}
+  /* celular: foto na metade de baixo, textos sobre o vermelho */
+  .hero{background:#6a0b0e}
+  .hero-media{top:auto;height:62%}
+  .hero-media img{object-position:center top}
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,#6a0b0e 0%,rgba(106,11,14,0) 18%)}
+  .hero::before{background:linear-gradient(to bottom,rgba(0,0,0,0) 60%,rgba(20,0,0,.8) 100%)}
+}
+.avail{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--muted);margin-top:22px}
+.avail i{width:8px;height:8px;border-radius:50%;background:#2bb673;box-shadow:0 0 0 4px #2bb67333}
+.ph{background:var(--card);border-radius:14px;display:grid;place-items:center;color:var(--muted);font-size:14px;text-align:center;padding:16px;position:relative;overflow:hidden}
+.ph::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent 0 14px,#00000008 14px 15px)}
+
+/* MARQUEE */
+.marquee{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;margin-top:30px}
+.track{display:flex;gap:48px;width:max-content;animation:scroll 28s linear infinite;font-size:clamp(22px,3vw,34px);font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.track span:nth-child(even){color:var(--accent)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.track{animation:none}}
+
+/* SECTIONS */
+section.block{padding:clamp(72px,10vw,140px) var(--pad);border-bottom:1px solid var(--line)}
+.label{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:clamp(28px,4vw,48px);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.label b{color:var(--ink);font-weight:500}
+h2{font-size:clamp(34px,5.6vw,80px);line-height:.98;letter-spacing:-.04em;font-weight:600;max-width:20ch}
+h2 .serif{color:var(--accent);letter-spacing:-.01em}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,5vw,64px)}
+.sec-head p{max-width:34ch;color:var(--muted);font-size:clamp(16px,1.4vw,18px)}
+
+/* WORKS */
+.works{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(28px,4vw,56px) clamp(16px,2.5vw,32px)}
+.work{display:block;cursor:pointer}
+.work .ph{aspect-ratio:4/3;transition:transform .6s cubic-bezier(.2,.7,.2,1),border-radius .6s}
+.work:hover .ph{transform:scale(.985);border-radius:28px}
+.ph.media{padding:0;background:#3a453a}
+.ph.media::after{display:none}
+.ph.media img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.work:hover .ph.media img{transform:scale(1.04)}
+.work .meta{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;column-gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.work .num{font-size:14px;color:var(--accent);font-weight:500}
+.work h3{font-size:clamp(20px,2.2vw,30px);letter-spacing:-.02em;font-weight:600;text-transform:uppercase;line-height:1.05}
+.work small{grid-column:2;color:var(--muted);font-size:14px;margin-top:4px}
+.work .go{grid-row:1;grid-column:3;font-size:14px;font-weight:500;opacity:0;transform:translateX(-8px);transition:opacity .3s,transform .3s;color:var(--accent)}
+.work:hover .go{opacity:1;transform:none}
+.work:nth-child(3n+1){grid-column:span 2}
+.work:nth-child(3n+1) .ph{aspect-ratio:16/8}
+@media(max-width:820px){.works{grid-template-columns:1fr}.work:nth-child(3n+1){grid-column:auto}.work .ph,.work:nth-child(3n+1) .ph{aspect-ratio:4/3}.work .go{opacity:1;transform:none}}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,6vw,96px);align-items:start}
+.about-img{margin:0;border-radius:14px;overflow:hidden;aspect-ratio:4/5;background:#e9e7e3;position:sticky;top:96px}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-txt h2{margin-bottom:clamp(28px,4vw,44px)}
+.about-txt p{font-size:clamp(17px,1.6vw,20px);margin-bottom:18px;max-width:52ch}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(32px,5vw,56px)}
+.facts div{border-top:1px solid var(--ink);padding-top:14px}
+.facts b{display:block;font-size:clamp(32px,4vw,56px);letter-spacing:-.04em;font-weight:600;line-height:1}
+.facts span{display:block;color:var(--muted);font-size:14px;margin-top:8px}
+@media(max-width:820px){.about{grid-template-columns:1fr}.about-img{position:static}}
+@media(max-width:480px){.facts{grid-template-columns:1fr 1fr}}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:80px 1.1fr 1fr;gap:24px;padding:clamp(24px,3vw,40px) 0;border-top:1px solid var(--line);align-items:baseline;transition:padding .4s}
+.svc:last-child{border-bottom:1px solid var(--line)}
+.svc .n{font-size:14px;color:var(--accent);font-weight:500}
+.svc h3{font-size:clamp(26px,3.8vw,52px);letter-spacing:-.035em;font-weight:600;line-height:1;transition:color .3s}
+.svc:hover h3{color:var(--accent)}
+.svc p{color:var(--muted);max-width:44ch}
+@media(max-width:820px){.svc{grid-template-columns:1fr;gap:10px}}
+
+/* PROCESS */
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,28px)}
+.step{border-top:2px solid var(--ink);padding-top:20px}
+.step .n{font-size:14px;color:var(--accent);font-weight:500}
+.step h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.03em;margin:clamp(28px,4vw,56px) 0 10px;font-weight:600}
+.step p{color:var(--muted);font-size:16px;max-width:30ch}
+@media(max-width:1000px){.process{grid-template-columns:repeat(2,1fr);row-gap:40px}}
+@media(max-width:560px){.process{grid-template-columns:1fr}}
+
+/* TOOLS */
+.tools-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end}
+.tools{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.tools span{border:1px solid var(--ink);border-radius:999px;padding:10px 20px;font-size:clamp(16px,1.6vw,20px);font-weight:500}
+.tools span.ai{background:var(--accent);border-color:var(--accent);color:#fff}
+.tools-note{margin-top:18px;font-size:15px;color:var(--muted);display:flex;align-items:center;gap:10px}
+.tools-note i{width:12px;height:12px;border-radius:50%;background:var(--accent);flex:none}
+@media(max-width:820px){.tools-wrap{grid-template-columns:1fr}.tools{justify-content:flex-start}}
+
+/* CONTACT */
+.contact{position:relative;background:#6a0b0e;color:#fff;padding:clamp(80px,12vw,160px) var(--pad) 32px;overflow:hidden}
+.contact::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.contact>*{position:relative;z-index:1}
+.contact .label{color:#ffffffa6;border-bottom-color:#ffffff33}
+.contact .label b{color:#fff}
+.contact h2{font-size:clamp(48px,10vw,150px);max-width:none;line-height:.9;font-weight:800;letter-spacing:-.055em;text-transform:uppercase}
+.contact h2 .serif{color:#fff;font-weight:400;text-transform:none;letter-spacing:-.02em}
+.c-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(40px,6vw,72px)}
+.c-item{border-top:1px solid #ffffff40;padding-top:16px}
+.c-item small{color:#ffffffa6;font-size:13px;display:block;margin-bottom:6px}
+.c-item a{font-size:17px;word-break:break-word}
+.c-item a:hover{text-decoration:underline;text-underline-offset:4px}
+.contact .btn{background:#fff;color:#121212;margin-top:40px}
+.contact .btn:hover{background:#121212;color:#fff}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#ffffffa6;font-size:13px;margin-top:clamp(64px,10vw,120px);padding-top:20px;border-top:1px solid #ffffff33}
+footer a:hover{color:#fff}
+@media(max-width:820px){.c-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.c-grid{grid-template-columns:1fr}}
+
+/* PHOTO GRID */
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(150px,17vw,250px);grid-auto-flow:dense;gap:clamp(8px,1.2vw,16px)}
+.ph-item{position:relative;margin:0;border-radius:14px;overflow:hidden;cursor:zoom-in;background:#ddd8cf}
+.ph-item.big{grid-column:span 2;grid-row:span 2}
+.ph-item.tall{grid-row:span 2}
+.ph-item img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.ph-item:hover img,.ph-item:focus-visible img{transform:scale(1.05)}
+.ph-item figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding:28px 14px 12px;color:#fff;font-size:14px;font-weight:500;background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0));opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.ph-item figcaption small{font-size:12px;opacity:.75;font-weight:400}
+.ph-item:hover figcaption,.ph-item:focus-visible figcaption{opacity:1;transform:none}
+.photo-foot{margin-top:clamp(24px,3vw,40px)}
+@media(max-width:820px){.photo-grid{grid-template-columns:1fr 1fr;grid-auto-rows:40vw}.ph-item.big{grid-row:span 1}.ph-item figcaption{opacity:1;transform:none;font-size:13px;padding:24px 10px 9px;line-height:1.2}.ph-item figcaption small{display:none}}
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(14,12,12,.94);display:none;align-items:center;justify-content:center;padding:clamp(56px,7vw,80px) clamp(12px,6vw,96px)}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+.lb p{position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#ffffffcc;font-size:14px;padding:0 16px}
+.lb button{position:absolute;background:none;border:1px solid #ffffff66;color:#fff;border-radius:999px;font:inherit;font-size:15px;padding:10px 16px;cursor:pointer}
+.lb button:hover{background:#fff;color:#121212}
+.lb .x{top:16px;right:16px}.lb .prev{left:16px;top:50%;transform:translateY(-50%)}.lb .next{right:16px;top:50%;transform:translateY(-50%)}
+@media(max-width:600px){.lb .prev,.lb .next{top:auto;bottom:52px;transform:none}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo">Helena Dias</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links"><span id="menuLabel">Menu</span></button>
+    <div class="links" id="links">
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#processo">Processo</a>
+      <a href="#fotografia">Fotografia</a>
+      <a href="#contato">Contato</a>
+      <a class="links-cv" href="cv-helena-dias.pdf" download>Baixar CV ↓</a>
+    </div>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <picture>
+        <source media="(max-width:820px)" srcset="hero-mobile.jpg">
+        <img src="hero.jpg" alt="Retrato editorial de Helena Dias com fones brancos e a mão cobrindo parte do rosto, sobre fundo vermelho" fetchpriority="high">
+      </picture>
+    </div>
+
+    <div class="hero-top">
+      <ul class="hero-services">
+        <li>Identidade Visual</li>
+        <li>Landing Pages</li>
+        <li>UX/UI Design</li>
+        <li>Campanhas</li>
+      </ul>
+      <div class="hero-side">
+        <p>Transformo estratégia de negócio em marcas, sites e campanhas que comunicam com atitude e convertem.</p>
+        <div class="cta">
+          <a class="btn light" href="#trabalhos">Ver projetos</a>
+          <a class="btn ghost-light" href="cv-helena-dias.pdf" download>Baixar CV ↓</a>
+        </div>
+      </div>
+    </div>
+
+    <h1><span class="l">Visual <span class="serif">&amp;</span></span><span class="l l2">UX/UI Designer</span></h1>
+  </section>
+
+  <!-- TRABALHOS -->
+  <section class="block" id="trabalhos">
+    <div class="label"><b>01 ( Trabalhos )</b><span>2024 — 2026</span></div>
+    <div class="sec-head">
+      <h2 class="rv">Trabalhos <span class="serif">selecionados</span></h2>
+      <p class="rv">Marcas, landing pages e campanhas reais, do briefing à entrega final.</p>
+    </div>
+    <div class="works">
+      <a class="work rv" href="magno-moinhos.html"><div class="ph media"><img src="projetos/magno-moinhos/capa-card.jpg" alt="Site do Magno Moinhos by São Pietro Sênior aberto em um notebook no rooftop do empreendimento" loading="lazy"></div><div class="meta"><span class="num">01</span><h3>Magno Moinhos</h3><small>Site institucional · UX/UI · Fotografia</small><span class="go">Ver case →</span></div></a>
+      <a class="work rv" href="sao-pietro-news.html"><div class="ph media"><img src="projetos/sao-pietro/capa-card.jpg" alt="Revista São Pietro News aberta sobre uma mesa de madeira" loading="lazy"></div><div class="meta"><span class="num">02</span><h3>São Pietro News</h3><small>Design Editorial · Impresso e Digital</small><span class="go">Ver case →</span></div></a>
+      <a class="work rv" href="seg-conecta.html"><div class="ph media"><img src="projetos/seg/capa-card.jpg" alt="Feirão Conecta Empregos com o logo no painel do palco" loading="lazy"></div><div class="meta"><span class="num">03</span><h3>Conecta Empregos</h3><small>Identidade Visual · Social Media</small><span class="go">Ver case →</span></div></a>
+      <a class="work rv" href="bapho.html"><div class="ph media"><img src="projetos/bapho/capa-card.jpg" alt="Site da Bapho em um notebook sobre pedestal pink com bota vermelha e globo espelhado" loading="lazy"></div><div class="meta"><span class="num">04</span><h3>Bapho</h3><small>E-commerce · Direção de arte com IA</small><span class="go">Ver case →</span></div></a>
+      <a class="work rv" href="sleep-well.html"><div class="ph media"><img src="projetos/sleep-well/capa-card.jpg" alt="Mockup em perspectiva da landing page do app Sleep Well" loading="lazy"></div><div class="meta"><span class="num">05</span><h3>Sleep Well</h3><small>Landing Page · UI</small><span class="go">Ver case →</span></div></a>
+      <a class="work rv" href="maria-eduarda.html"><div class="ph media"><img src="projetos/maria-eduarda/capa-card.jpg" alt="Papelaria da identidade visual da Dra. Maria Eduarda Pagnussatti" loading="lazy"></div><div class="meta"><span class="num">06</span><h3>Maria Eduarda</h3><small>Identidade Visual · Social Media</small><span class="go">Ver case →</span></div></a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="block" id="sobre">
+    <div class="label"><b>02 ( Sobre )</b><span>Helena Dias</span></div>
+    <div class="about">
+      <figure class="about-img rv"><img src="sobre.jpg" alt="Retrato de Helena Dias de óculos, blazer preto, gola branca e suéter vermelho, sobre fundo cinza de estúdio" loading="lazy"></figure>
+      <div class="about-txt">
+        <h2 class="rv">Design com intenção: cada escolha visual tem um <span class="serif">porquê</span>.</h2>
+        <div class="rv">
+          <p>Sou formada em Design Visual pela ESPM e há mais de 5 anos crio marcas, sites e campanhas. Hoje sou designer no Grupo São Pietro, onde cuido da comunicação do São Pietro Hospitais e Clínicas e do São Pietro Sênior, do site do Magno Moinhos à revista São Pietro News.</p>
+          <p>Também sou sócia da Duma, agência onde produzimos fotos, vídeos, Reels e social media para clientes de diferentes segmentos. Essa vivência com fotografia e conteúdo faz parte de como eu penso cada projeto.</p>
+          <p>Conduzo projetos do briefing à entrega final, em parceria com marketing, copy e tráfego pago, e uso ferramentas de IA para acelerar a criação sem abrir mão da qualidade.</p>
+        </div>
+        <div class="facts rv">
+          <div><b>5+</b><span>anos de experiência</span></div>
+          <div><b>23+</b><span>marcas atendidas</span></div>
+          <div><b>POA</b><span>disponível para presencial e remoto</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="block">
+    <div class="label"><b>03 ( O que eu faço )</b><span>Serviços</span></div>
+    <div class="sec-head"><h2 class="rv">Da marca à página <span class="serif">que converte.</span></h2></div>
+    <div class="services">
+      <div class="svc rv"><span class="n">01</span><h3>Identidade Visual</h3><p>Logotipos, paletas, tipografia e manuais de marca que traduzem posicionamento, público e proposta de valor.</p></div>
+      <div class="svc rv"><span class="n">02</span><h3>Landing Pages &amp; UX/UI</h3><p>Páginas responsivas pensadas para usabilidade e conversão, com bibliotecas de componentes no Figma para agilizar as entregas.</p></div>
+      <div class="svc rv"><span class="n">03</span><h3>Campanhas &amp; Criativos</h3><p>Conceitos visuais para anúncios, social media, apresentações e materiais comerciais, alinhados à estratégia de comunicação.</p></div>
+    </div>
+  </section>
+
+  <!-- PROCESSO -->
+  <section class="block" id="processo">
+    <div class="label"><b>04 ( Processo )</b><span>Do briefing à entrega</span></div>
+    <div class="sec-head"><h2 class="rv">Como eu conduzo <span class="serif">um projeto.</span></h2></div>
+    <div class="process">
+      <div class="step rv"><span class="n">(01)</span><h3>Briefing</h3><p>Entendo o negócio, o público e o objetivo antes de abrir qualquer arquivo.</p></div>
+      <div class="step rv"><span class="n">(02)</span><h3>Estratégia</h3><p>Defino direção, referências e estrutura, e apresento a proposta justificando cada decisão.</p></div>
+      <div class="step rv"><span class="n">(03)</span><h3>Criação</h3><p>Desenvolvo no Figma, Photoshop e Illustrator, usando IA para explorar conceitos e refinar imagens.</p></div>
+      <div class="step rv"><span class="n">(04)</span><h3>Entrega</h3><p>Arquivos organizados e editáveis, acompanhamento da implementação e ajustes a partir dos resultados.</p></div>
+    </div>
+  </section>
+
+  <!-- FERRAMENTAS -->
+  <section class="block">
+    <div class="label"><b>05 ( Ferramentas )</b><span>Stack</span></div>
+    <div class="tools-wrap">
+      <div class="rv">
+        <h2>Ferramentas <span class="serif">do dia a dia.</span></h2>
+        <p class="tools-note"><i></i>Em vermelho, as IAs que uso no processo criativo.</p>
+      </div>
+      <div class="tools rv">
+        <span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>Framer</span>
+        <span class="ai">Magnific</span><span class="ai">ChatGPT</span><span class="ai">Claude</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTOGRAFIA -->
+  <section class="block" id="fotografia">
+    <div class="label"><b>06 ( Fotografia )</b><span>Clique para ampliar</span></div>
+    <div class="sec-head">
+      <h2 class="rv">Também <span class="serif">fotografo.</span></h2>
+      <p class="rv">Arquitetura, interiores e marcas. Além de criar as peças, produzo as imagens que dão vida a elas.</p>
+    </div>
+    <div class="photo-grid rv" id="photoGrid">
+        <figure class="ph-item big"><img src="projetos/magno-moinhos/foto-fachada.jpg" alt="Fachada com o casarão restaurado e a nova torre" loading="lazy"><figcaption><span>Fachada: casarão restaurado e torre nova</span><small>Magno Moinhos</small></figcaption></figure>
+        <figure class="ph-item "><img src="projetos/magno-moinhos/foto-suite.jpg" alt="Suíte com cama de casal e portas de vidro para o terraço" loading="lazy"><figcaption><span>Suíte com vista</span><small>Magno Moinhos</small></figcaption></figure>
+        <figure class="ph-item tall"><img src="projetos/magno-moinhos/foto-cabeceira.jpg" alt="Cabeceira em madeira com botão de chamada de enfermagem" loading="lazy"><figcaption><span>Detalhe da cabeceira</span><small>Magno Moinhos</small></figcaption></figure>
+        <figure class="ph-item "><img src="projetos/magno-moinhos/foto-living.jpg" alt="Sala de estar com sofá, mesa redonda e janelas para as árvores" loading="lazy"><figcaption><span>Sala de estar</span><small>Magno Moinhos</small></figcaption></figure>
+        <figure class="ph-item "><img src="projetos/magno-moinhos/foto-atelier.jpg" alt="Moradores pintando aquarelas no ateliê de artes" loading="lazy"><figcaption><span>Ateliê de artes</span><small>Magno Moinhos</small></figcaption></figure>
+        <figure class="ph-item tall"><img src="projetos/magno-moinhos/foto-jogos.jpg" alt="Sala de jogos com mesa de feltro verde e piso de pastilhas" loading="lazy"><figcaption><span>Sala de jogos</span><small>Magno Moinhos</small></figcaption></figure>
+        <figure class="ph-item big"><img src="projetos/magno-moinhos/foto-rooftop.jpg" alt="Rooftop com pergolado de madeira e mesas" loading="lazy"><figcaption><span>Rooftop com pergolado</span><small>Magno Moinhos</small></figcaption></figure>
+        <figure class="ph-item "><img src="projetos/magno-moinhos/foto-corredor.jpg" alt="Morador caminhando com enfermeira em corredor com pintura orgânica" loading="lazy"><figcaption><span>Corredor da ala Memory Care</span><small>Magno Moinhos</small></figcaption></figure>
+    </div>
+    <div class="photo-foot"><a class="btn ghost" href="magno-moinhos.html#fotos">Ver todas as fotos do Magno Moinhos →</a></div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contact" id="contato">
+    <div class="label"><b>07 ( Contato )</b><span>Porto Alegre — RS</span></div>
+    <h2>Vamos criar<br>algo <span class="serif">juntos?</span></h2>
+    <div class="c-grid">
+      <div class="c-item"><small>E-mail</small><a href="mailto:diasdehelenadesign@gmail.com">diasdehelenadesign@gmail.com</a></div>
+      <div class="c-item"><small>WhatsApp</small><a href="https://wa.me/5551980593552" target="_blank" rel="noopener">(51) 98059-3552</a></div>
+      <div class="c-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/diasdehelena" target="_blank" rel="noopener">/in/diasdehelena</a></div>
+      <div class="c-item"><small>Currículo</small><a href="cv-helena-dias.pdf" download>Baixar CV (PDF) ↓</a></div>
+    </div>
+    <a class="btn" href="mailto:diasdehelenadesign@gmail.com">Enviar e-mail →</a>
+    <footer>
+      <span>© <span id="yr">2026</span> Helena Dias</span>
+      <a href="#top">Voltar ao topo ↑</a>
+    </footer>
+  </section>
+
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="x" id="lbX">Fechar</button>
+  <button class="prev" id="lbPrev" aria-label="Foto anterior">←</button>
+  <img id="lbImg" alt="">
+  <button class="next" id="lbNext" aria-label="Próxima foto">→</button>
+  <p id="lbCap"></p>
+</div>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // menu mobile
+  const links=document.getElementById('links');
+  const hdr=document.querySelector('header');
+  const menuBtn=document.getElementById('menuBtn');
+  const menuLabel=document.getElementById('menuLabel');
+  const setMenu=open=>{links.classList.toggle('open',open);hdr.classList.toggle('menu-open',open);menuBtn.setAttribute('aria-expanded',open);menuLabel.textContent=open?'Fechar':'Menu'};
+  const closeMenu=()=>setMenu(false);
+  menuBtn.addEventListener('click',()=>setMenu(!links.classList.contains('open')));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+
+  // menu transparente sobre a foto, sólido depois dela
+  const hero=document.getElementById('hero');
+  const onScroll=()=>hdr.classList.toggle('solid',window.scrollY>hero.offsetHeight-80);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  // animação ao rolar
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  // galeria de fotografia
+  const figs=[...document.querySelectorAll('#photoGrid figure')];
+  const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+  let cur=0;
+  const show=i=>{cur=(i+figs.length)%figs.length;const im=figs[cur].querySelector('img');lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=figs[cur].querySelector('span').textContent+'  ·  '+(cur+1)+'/'+figs.length};
+  const openLb=i=>{show(i);lb.classList.add('open');document.body.style.overflow='hidden';document.getElementById('lbX').focus()};
+  const closeLb=()=>{lb.classList.remove('open');document.body.style.overflow=''};
+  figs.forEach((f,i)=>{f.tabIndex=0;f.addEventListener('click',()=>openLb(i));f.addEventListener('keydown',e=>{if(e.key==='Enter')openLb(i)})});
+  document.getElementById('lbX').onclick=closeLb;
+  document.getElementById('lbPrev').onclick=()=>show(cur-1);
+  document.getElementById('lbNext').onclick=()=>show(cur+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+</script>
+</body>
+</html>
