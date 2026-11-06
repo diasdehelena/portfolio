@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>São Pietro News — Case · Helena Dias</title>
+<meta name="description" content="Case editorial: projeto gráfico e diagramação da revista São Pietro News, do Grupo São Pietro, em versão impressa e digital.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;700&family=Lexend:wght@300;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f3f1ec; --ink:#121212; --muted:#6b6862; --line:#d9d5cc;
+  --accent:#1f86c9;      /* azul São Pietro */
+  --navy:#0c2041; --sky:#3fb1e5; --gold:#cdb58f; --sand:#f4ebdc;
+  --brand:#6a0b0e;
+  --pad:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.serif{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:20;color:#fff;border-bottom:1px solid transparent;transition:background .35s,color .35s,border-color .35s}
+header.tint{background:color-mix(in srgb,var(--navy) 94%,transparent);backdrop-filter:blur(10px);border-bottom-color:#ffffff1f}
+header.solid{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);color:var(--ink);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px var(--pad)}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:18px}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;border:1px solid currentColor;border-radius:999px;padding:11px 18px;transition:background .2s,color .2s,border-color .2s}
+header:not(.solid) .pill{border-color:#ffffffb3}
+header:not(.solid) .pill:hover{background:#fff;color:var(--ink);border-color:#fff}
+header.solid .pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* HERO */
+.c-hero{background:var(--navy);color:#fff;padding:clamp(110px,16vh,160px) var(--pad) 0;position:relative;overflow:hidden}
+.c-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.c-hero>*{position:relative;z-index:1}
+.kicker{display:flex;justify-content:space-between;gap:16px;font-size:14px;color:#ffffffb3;padding-bottom:14px;border-bottom:1px solid #ffffff33}
+.kicker b{color:#fff;font-weight:500}
+.c-hero h1{font-size:clamp(54px,12vw,184px);line-height:.86;letter-spacing:-.05em;font-weight:800;text-transform:uppercase;margin-top:clamp(28px,5vw,56px)}
+.c-hero h1 .serif{display:block;text-transform:none;letter-spacing:-.02em;color:var(--sky);font-size:.4em;line-height:1.15;margin-top:.15em}
+.c-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,80px);margin-top:clamp(32px,5vw,64px);align-items:end}
+.c-intro p{font-size:clamp(18px,1.7vw,23px);line-height:1.35;max-width:36ch}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+.meta div{border-top:1px solid #ffffff40;padding-top:10px}
+.meta small{display:block;font-size:13px;color:#ffffffa6;margin-bottom:2px}
+.meta span{font-size:16px;font-weight:500}
+.cover{margin:clamp(40px,6vw,80px) 0 0;border-radius:14px 14px 0 0;overflow:hidden}
+.cover img{width:100%;height:auto}
+@media(max-width:820px){.c-intro{grid-template-columns:1fr}.cover{margin-top:40px}}
+
+/* SECTIONS */
+section.block{padding:clamp(72px,10vw,140px) var(--pad);border-bottom:1px solid var(--line)}
+.label{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:clamp(28px,4vw,48px);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.label b{color:var(--ink);font-weight:500}
+h2{font-size:clamp(34px,5.6vw,80px);line-height:.98;letter-spacing:-.04em;font-weight:600;max-width:18ch}
+h2 .serif{color:var(--accent);letter-spacing:-.01em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,96px);align-items:start}
+.prose p{font-size:clamp(17px,1.5vw,20px);margin-bottom:18px;max-width:54ch}
+.prose p strong{font-weight:600}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(40px,6vw,72px)}
+.facts div{border-top:2px solid var(--ink);padding-top:14px}
+.facts b{display:block;font-size:clamp(36px,4.4vw,64px);letter-spacing:-.04em;font-weight:600;line-height:1}
+.facts span{display:block;color:var(--muted);font-size:15px;margin-top:8px;max-width:22ch}
+@media(max-width:820px){.facts{grid-template-columns:1fr 1fr;row-gap:28px}}
+
+/* FLIPBOOK */
+.reader{background:var(--navy);color:#fff;padding:clamp(72px,10vw,140px) var(--pad)}
+.reader .label{color:#ffffffa6;border-bottom-color:#ffffff2e}
+.reader .label b{color:#fff}
+.reader h2{color:#fff}
+.reader h2 .serif{color:var(--sky)}
+.reader .lead{color:#ffffffcc;font-size:clamp(17px,1.5vw,20px);max-width:52ch;margin-top:20px}
+.book-wrap{max-width:min(1180px,calc((100vh - 230px) * 1.414));margin:clamp(40px,6vw,72px) auto 0;position:relative}
+@media(max-width:700px){.book-wrap{max-width:min(100%,calc((100vh - 260px) * .707))}.book-ctrl{gap:8px}.book-ctrl button{padding:10px 14px;font-size:14px;white-space:nowrap}.book-ctrl .count{min-width:0;font-size:14px}}
+#book{margin:0 auto}
+#book .pg{background:#fff}
+#book .pg img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;user-select:none}
+.book-ctrl{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:28px}
+.book-ctrl button{background:none;border:1px solid #ffffff80;color:#fff;border-radius:999px;font:inherit;font-size:15px;padding:11px 20px;cursor:pointer;transition:background .2s,color .2s}
+.book-ctrl button:hover{background:#fff;color:var(--navy)}
+.book-ctrl button:disabled{opacity:.35;cursor:default;background:none;color:#fff}
+.book-ctrl .count{min-width:120px;text-align:center;font-variant-numeric:tabular-nums;color:#ffffffcc;font-size:15px}
+.book-hint{text-align:center;color:#ffffff8c;font-size:13px;margin-top:12px}
+.book-fallback{display:none}
+
+/* DECISIONS */
+.decisions{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(36px,5vw,64px)}
+.dec{border-top:2px solid var(--ink);padding-top:18px}
+.dec .n{font-size:14px;color:var(--accent);font-weight:600}
+.dec h3{font-size:clamp(22px,2.1vw,28px);letter-spacing:-.025em;line-height:1.1;margin:clamp(20px,3vw,36px) 0 10px;font-weight:600}
+.dec p{color:var(--muted);font-size:16px;max-width:34ch}
+@media(max-width:1000px){.decisions{grid-template-columns:1fr 1fr;row-gap:40px}}
+@media(max-width:560px){.decisions{grid-template-columns:1fr}}
+
+/* SPREADS */
+.spreads{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px) clamp(16px,2.5vw,32px);margin-top:clamp(36px,5vw,64px)}
+.spread figure{margin:0;cursor:zoom-in}
+.spread .shot{border-radius:10px;overflow:hidden;box-shadow:0 24px 48px -28px rgba(12,32,65,.45),0 0 0 1px rgba(0,0,0,.05);background:#fff}
+.spread figcaption{display:grid;grid-template-columns:auto 1fr;column-gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.spread figcaption b{font-size:14px;color:var(--accent);font-weight:600}
+.spread figcaption h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:-.02em;font-weight:600;line-height:1.15}
+.spread figcaption p{grid-column:2;color:var(--muted);font-size:15px;margin-top:4px;max-width:48ch}
+.spread.wide{grid-column:span 2}
+@media(max-width:820px){.spreads{grid-template-columns:1fr}.spread.wide{grid-column:auto}}
+
+/* MOCKUPS */
+.mocks{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(16px,2.5vw,32px);margin-top:clamp(36px,5vw,64px);align-items:start}
+.mock figure{margin:0}
+.mock .im{border-radius:14px;overflow:hidden}
+.mock .im img{width:100%;height:auto}
+.mock figcaption{display:grid;grid-template-columns:auto 1fr;column-gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.mock figcaption b{font-size:14px;color:var(--accent);font-weight:600}
+.mock figcaption h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:-.02em;font-weight:600}
+.mock figcaption p{grid-column:2;color:var(--muted);font-size:15px;margin-top:4px;max-width:46ch}
+.mock.full{grid-column:span 2}
+@media(max-width:820px){.mocks{grid-template-columns:1fr}.mock.full{grid-column:auto}}
+
+/* VISUAL SYSTEM */
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:clamp(36px,5vw,64px)}
+.sw{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.sw div{aspect-ratio:1/1.1}
+.sw p{padding:12px 14px;font-size:14px;line-height:1.3}
+.sw p span{display:block;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.type{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.type>div{border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3vw,36px);background:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:240px}
+.type .aa{font-size:clamp(72px,9vw,140px);line-height:.9;color:var(--navy)}
+.type .t1 .aa,.type .t1 .sample{font-family:"Montserrat",sans-serif}
+.type .t1 .aa{font-weight:700}
+.type .t1 .sample b{font-weight:700}
+.type .t2 .aa,.type .t2 .sample{font-family:"Lexend",sans-serif;font-weight:300}
+.type .sample{font-size:clamp(18px,1.8vw,24px);line-height:1.3;max-width:30ch;color:var(--navy)}
+.type small{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:820px){.swatches{grid-template-columns:repeat(3,1fr)}.type{grid-template-columns:1fr}}
+@media(max-width:480px){.swatches{grid-template-columns:1fr 1fr}}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(8,16,32,.95);display:none;align-items:center;justify-content:center;padding:clamp(56px,7vw,80px) clamp(12px,4vw,64px)}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+.lb p{position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#ffffffcc;font-size:14px;padding:0 16px}
+.lb button{position:absolute;background:none;border:1px solid #ffffff66;color:#fff;border-radius:999px;font:inherit;font-size:15px;padding:10px 16px;cursor:pointer}
+.lb button:hover{background:#fff;color:#121212}
+.lb .x{top:16px;right:16px}.lb .prev{left:16px;top:50%;transform:translateY(-50%)}.lb .next{right:16px;top:50%;transform:translateY(-50%)}
+@media(max-width:600px){.lb .prev,.lb .next{top:auto;bottom:52px;transform:none}}
+
+/* CTA */
+.cta{position:relative;background:var(--brand);color:#fff;padding:clamp(80px,12vw,150px) var(--pad) 32px;overflow:hidden}
+.cta::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cta>*{position:relative;z-index:1}
+.cta h2{color:#fff;font-size:clamp(46px,9vw,140px);max-width:none;line-height:.9;font-weight:800;letter-spacing:-.055em;text-transform:uppercase}
+.cta h2 .serif{color:#fff;text-transform:none;letter-spacing:-.02em}
+.cta .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:500;font-size:15px;transition:background .2s,color .2s}
+.btn.w{background:#fff;color:#121212}.btn.w:hover{background:#121212;color:#fff}
+.btn.o{border:1px solid #ffffffb3;color:#fff}.btn.o:hover{background:#fff;color:#121212}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#ffffffa6;font-size:13px;margin-top:clamp(64px,10vw,120px);padding-top:20px;border-top:1px solid #ffffff33}
+footer a:hover{color:#fff}
+.next-case{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid #ffffff33;font-size:15px}
+.next-case a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <nav class="nav">
+    <a href="index.html" class="logo">Helena Dias</a>
+    <a href="index.html#trabalhos" class="pill">← Todos os trabalhos</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="c-hero" id="topo">
+    <div class="kicker"><b>Case 02</b><span>Editorial · Saúde</span></div>
+    <h1>São Pietro News <span class="serif">Revista do Grupo São Pietro</span></h1>
+    <div class="c-intro">
+      <p>Projeto gráfico e diagramação da revista institucional do Grupo São Pietro, pensada para circular impressa nas unidades e em versão digital.</p>
+      <div class="meta">
+        <div><small>Cliente</small><span>Grupo São Pietro</span></div>
+        <div><small>Edição</small><span>Novembro de 2026</span></div>
+        <div><small>Escopo</small><span>Design Editorial · Diagramação</span></div>
+        <div><small>Formatos</small><span>Impresso A4 e digital</span></div>
+      </div>
+    </div>
+    <figure class="cover">
+      <img src="projetos/sao-pietro/capa-hero.jpg" alt="Revista São Pietro News em pé sobre um pedestal azul, com luz de estúdio dramática, e a contracapa de outra edição atrás" width="2400" height="1339">
+    </figure>
+  </section>
+
+  <!-- CONTEXTO -->
+  <section class="block">
+    <div class="label"><b>01 ( Desafio )</b><span>Um grupo, muitos públicos</span></div>
+    <div class="two">
+      <h2 class="rv">Uma revista para <span class="serif">contar o grupo inteiro.</span></h2>
+      <div class="prose rv">
+        <p>O Grupo São Pietro reúne hospitais, clínicas e o São Pietro Sênior, sua operação de Senior Living. A São Pietro News é o canal que conta essas histórias para pacientes, famílias, médicos e colaboradores.</p>
+        <p>O desafio era organizar conteúdos muito diferentes, como reportagens, dados de mercado, saúde e histórias de 70 anos, em uma leitura <strong>confortável para um público que inclui pessoas 60+</strong>, e que funcionasse tanto no papel quanto na tela.</p>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="rv"><b>2</b><span>partes: São Pietro Sênior e Hospitais e Clínicas</span></div>
+      <div class="rv"><b>6</b><span>matérias numeradas, cada uma com sua abertura</span></div>
+      <div class="rv"><b>28</b><span>páginas em formato A4</span></div>
+      <div class="rv"><b>2</b><span>formatos: impresso e digital</span></div>
+    </div>
+  </section>
+
+  <!-- FOLHEAR -->
+  <section class="reader" id="folhear">
+    <div class="label"><b>02 ( Folheie a revista )</b><span>Edição de novembro de 2026</span></div>
+    <h2 class="rv">Vire as páginas <span class="serif">como no papel.</span></h2>
+    <p class="lead rv">Clique nas bordas, arraste o canto da página ou use as setas. Nesta versão de portfólio, a página editorial e os anúncios ainda em aberto foram substituídos por páginas da marca.</p>
+    <div class="book-wrap rv">
+      <div id="book">
+        <div class="pg" data-density="hard"><img src="projetos/sao-pietro/pages/p01.jpg" alt="Capa: Viver a longevidade é uma nova experiência de vida"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p02.jpg" alt="Página da marca São Pietro"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p03.jpg" alt="Sumário"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p04.jpg" alt="Abertura da parte 1, São Pietro Sênior"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p05.jpg" alt="Matéria 01: Viver a longevidade é uma nova experiência de vida"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p06.jpg" alt="Infográfico: o Brasil envelheceu em tempo recorde"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p07.jpg" alt="Foto do rooftop com frase de destaque"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p08.jpg" alt="Matéria 02: primeira operadora de Senior Living do Brasil"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p09.jpg" alt="Diagrama da equipe multidisciplinar"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p10.jpg" alt="Fotos da unidade Moinhos de Vento"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p11.jpg" alt="Matéria 03: São Pietro amplia operação de Senior Living"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p12.jpg" alt="Continuação da matéria 03"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p13.jpg" alt="Infográfico: um modelo validado na primeira operação"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p14.jpg" alt="Anúncio São Pietro Sênior Magno Moinhos"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p15.jpg" alt="Abertura da parte 2: Hospital Banco de Olhos, 70 anos"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p16.jpg" alt="Matéria 04: Hospital Banco de Olhos São Pietro"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p17.jpg" alt="Continuação da matéria 04"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p18.jpg" alt="Linha do tempo: sete décadas de oftalmologia"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p19.jpg" alt="Anúncio de cirurgia refrativa do Hospital Banco de Olhos"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p20.jpg" alt="Matéria 05: Catarata"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p21.jpg" alt="Continuação da matéria 05"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p22.jpg" alt="Sinais que merecem avaliação"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p23.jpg" alt="Página da marca São Pietro"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p24.jpg" alt="Matéria 06: Aqui o conhecimento também é parte do cuidado"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p25.jpg" alt="Continuação da matéria 06"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p26.jpg" alt="Estrutura de ensino"></div>
+        <div class="pg"><img src="projetos/sao-pietro/pages/p27.jpg" alt="Página da marca São Pietro"></div>
+        <div class="pg" data-density="hard"><img src="projetos/sao-pietro/pages/p28.jpg" alt="Contracapa com as unidades São Pietro"></div>
+      </div>
+      <div class="book-ctrl">
+        <button id="bPrev" aria-label="Página anterior">← Anterior</button>
+        <span class="count" id="bCount">Capa</span>
+        <button id="bNext" aria-label="Próxima página">Próxima →</button>
+      </div>
+      <p class="book-hint">Dica: no celular, a revista abre uma página por vez.</p>
+    </div>
+  </section>
+
+  <!-- DECISÕES -->
+  <section class="block">
+    <div class="label"><b>03 ( Solução )</b><span>Decisões de design</span></div>
+    <h2 class="rv">Cada escolha <span class="serif">com um porquê.</span></h2>
+    <div class="decisions">
+      <div class="dec rv"><span class="n">(01)</span><h3>Duas partes, um só projeto</h3><p>Cada parte da revista ganha uma página de abertura própria, com foto grande e identificação, para o leitor saber onde está sem perder a unidade visual.</p></div>
+      <div class="dec rv"><span class="n">(02)</span><h3>Matérias numeradas</h3><p>Números grandes de 01 a 06 abrem cada matéria e se repetem no sumário. É um sistema simples de navegação, que funciona no papel e na tela.</p></div>
+      <div class="dec rv"><span class="n">(03)</span><h3>Leitura para todas as idades</h3><p>Corpo de texto generoso, colunas com respiro, entrelinha aberta e alto contraste. Parte do público é 60+, e a revista precisava ser confortável para ler.</p></div>
+      <div class="dec rv"><span class="n">(04)</span><h3>Dados que se leem rápido</h3><p>Números de mercado e de operação viram infográficos com ícones e cards, em vez de parágrafos. A informação mais importante aparece em segundos.</p></div>
+      <div class="dec rv"><span class="n">(05)</span><h3>Destaques no meio do texto</h3><p>Citações, intertítulos e boxes quebram os textos longos e criam pontos de entrada para quem folheia sem ler tudo.</p></div>
+      <div class="dec rv"><span class="n">(06)</span><h3>Impresso e digital</h3><p>Arquivos fechados em CMYK para a gráfica e em RGB para a leitura em tela, com o mesmo grid e as mesmas proporções nos dois formatos.</p></div>
+    </div>
+  </section>
+
+  <!-- PÁGINAS EM DESTAQUE -->
+  <section class="block">
+    <div class="label"><b>04 ( Páginas em destaque )</b><span>Clique para ampliar</span></div>
+    <h2 class="rv">Página a página, <span class="serif">o mesmo cuidado.</span></h2>
+    <div class="spreads" id="spreads">
+      <div class="spread wide rv"><figure>
+        <div class="shot"><img src="projetos/sao-pietro/spread-dados.jpg" alt="Página dupla com infográfico sobre o envelhecimento no Brasil e foto do rooftop" loading="lazy"></div>
+        <figcaption><b>01</b><h3>Dados e respiro</h3><p>O infográfico sobre o envelhecimento do Brasil divide a página dupla com uma foto em página inteira e uma frase de impacto.</p></figcaption>
+      </figure></div>
+      <div class="spread rv"><figure>
+        <div class="shot"><img src="projetos/sao-pietro/spread-equipe.jpg" alt="Página dupla com abertura da matéria 02 e diagrama da equipe multidisciplinar" loading="lazy"></div>
+        <figcaption><b>02</b><h3>Diagrama da equipe</h3><p>A equipe multidisciplinar em torno do morador, explicada em um diagrama circular.</p></figcaption>
+      </figure></div>
+      <div class="spread rv"><figure>
+        <div class="shot"><img src="projetos/sao-pietro/spread-expansao.jpg" alt="Página dupla sobre a expansão do Senior Living com números da operação" loading="lazy"></div>
+        <figcaption><b>03</b><h3>Números da operação</h3><p>Ícones e grandes números em fundo azul-marinho resumem o modelo de negócio.</p></figcaption>
+      </figure></div>
+      <div class="spread rv"><figure>
+        <div class="shot"><img src="projetos/sao-pietro/spread-abertura-parte.jpg" alt="Anúncio do São Pietro Sênior e abertura da parte 2 com os 70 anos do Hospital Banco de Olhos" loading="lazy"></div>
+        <figcaption><b>04</b><h3>Abertura da parte 2</h3><p>Os 70 anos do Hospital Banco de Olhos abrem a parte de Hospitais e Clínicas com tipografia grande sobre o azul.</p></figcaption>
+      </figure></div>
+      <div class="spread rv"><figure>
+        <div class="shot"><img src="projetos/sao-pietro/spread-catarata.jpg" alt="Página dupla da matéria sobre catarata com ilustração do olho" loading="lazy"></div>
+        <figcaption><b>05</b><h3>Saúde explicada</h3><p>A matéria sobre catarata usa uma ilustração do olho com legendas para explicar a cirurgia sem jargão.</p></figcaption>
+      </figure></div>
+    </div>
+  </section>
+
+  <!-- MOCKUPS -->
+  <section class="block">
+    <div class="label"><b>05 ( Impresso e digital )</b><span>A revista em uso</span></div>
+    <h2 class="rv">Do papel <span class="serif">à tela.</span></h2>
+    <div class="mocks">
+      <div class="mock full rv"><figure>
+        <div class="im"><img src="projetos/sao-pietro/mock-aberta.jpg" alt="Revista São Pietro News aberta sobre uma mesa de madeira, na matéria Viver a longevidade é uma nova experiência de vida" loading="lazy"></div>
+        <figcaption><b>01</b><h3>A revista aberta</h3><p>A abertura da parte 1 e a matéria principal formam uma página dupla com foto grande e título forte.</p></figcaption>
+      </figure></div>
+      <div class="mock rv"><figure>
+        <div class="im"><img src="projetos/sao-pietro/mock-capa.jpg" alt="Revista São Pietro News impressa, fechada, sobre linho claro" loading="lazy"></div>
+        <figcaption><b>02</b><h3>Versão impressa</h3><p>Formato A4, distribuída nas unidades do grupo. A capa traz a matéria principal da edição.</p></figcaption>
+      </figure></div>
+      <div class="mock rv"><figure>
+        <div class="im"><img src="projetos/sao-pietro/mock-tablet.jpg" alt="Mãos segurando um tablet com a revista São Pietro News aberta na matéria sobre o Hospital Banco de Olhos" loading="lazy"></div>
+        <figcaption><b>03</b><h3>Versão digital</h3><p>A mesma diagramação em leitura de página dupla no tablet, com o arquivo otimizado para tela.</p></figcaption>
+      </figure></div>
+    </div>
+  </section>
+
+  <!-- SISTEMA -->
+  <section class="block">
+    <div class="label"><b>06 ( Sistema visual )</b><span>Cores e tipografia</span></div>
+    <h2 class="rv">Azul institucional, <span class="serif">com calor humano.</span></h2>
+    <div class="swatches rv">
+      <div class="sw"><div style="background:#0c2041"></div><p>Azul-marinho<span>#0C2041</span></p></div>
+      <div class="sw"><div style="background:#3fb1e5"></div><p>Azul São Pietro<span>#3FB1E5</span></p></div>
+      <div class="sw"><div style="background:#cdb58f"></div><p>Dourado<span>#CDB58F</span></p></div>
+      <div class="sw"><div style="background:#f4ebdc"></div><p>Areia<span>#F4EBDC</span></p></div>
+      <div class="sw"><div style="background:#ffffff"></div><p>Branco<span>#FFFFFF</span></p></div>
+    </div>
+    <div class="type rv">
+      <div class="t1"><small>Textos · Gotham</small><span class="aa">Aa</span><p class="sample">Viver a longevidade é uma <b>nova experiência de vida</b></p></div>
+      <div class="t2"><small>Títulos e números · LT Wave</small><span class="aa">Aa</span><p class="sample">01 · 02 · 03 · 04 · 05 · 06</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Gostou <span class="serif">do projeto?</span></h2>
+    <div class="row">
+      <a class="btn w" href="index.html#trabalhos">Ver outros trabalhos</a>
+      <a class="btn o" href="mailto:diasdehelenadesign@gmail.com">diasdehelenadesign@gmail.com</a>
+      <a class="btn o" href="https://wa.me/5551980593552" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="next-case"><a href="magno-moinhos.html">← Magno Moinhos</a><a href="seg-conecta.html">Conecta Empregos →</a></div>
+    <footer>
+      <span>© <span id="yr">2026</span> Helena Dias</span>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </footer>
+  </section>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Página ampliada">
+  <button class="x" id="lbX">Fechar</button>
+  <button class="prev" id="lbPrev" aria-label="Anterior">←</button>
+  <img id="lbImg" alt="">
+  <button class="next" id="lbNext" aria-label="Próxima">→</button>
+  <p id="lbCap"></p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const hdr=document.getElementById('hdr'), heroCase=document.getElementById('topo');
+  const onScroll=()=>{const y=window.scrollY,past=y>heroCase.offsetHeight-80;hdr.classList.toggle('solid',past);hdr.classList.toggle('tint',!past&&y>30)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  // revista folheável
+  (function(){
+    const el=document.getElementById('book'), prev=document.getElementById('bPrev'), next=document.getElementById('bNext'), count=document.getElementById('bCount');
+    const pages=[...el.querySelectorAll('.pg')], total=pages.length;
+    if(!window.St||!St.PageFlip){ // sem a biblioteca: mostra as páginas em grade
+      el.style.cssText='display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px';
+      document.querySelector('.book-ctrl').style.display='none';return;
+    }
+    const pf=new St.PageFlip(el,{width:550,height:778,size:'stretch',minWidth:260,maxWidth:1100,minHeight:368,maxHeight:1556,showCover:true,maxShadowOpacity:.45,mobileScrollSupport:false,usePortrait:true,flippingTime:800});
+    pf.loadFromHTML(pages);
+    const label=i=>{
+      if(i===0) return 'Capa';
+      if(i>=total-1) return 'Contracapa';
+      if(pf.getOrientation()==='portrait') return 'Página '+(i+1)+' de '+total;
+      const a=i%2===1?i:i-1; return 'Páginas '+(a+1)+'–'+(a+2)+' de '+total;
+    };
+    const upd=()=>{const i=pf.getCurrentPageIndex();count.textContent=label(i);prev.disabled=i===0;next.disabled=i>=total-1};
+    pf.on('flip',upd);pf.on('changeOrientation',upd);upd();
+    prev.onclick=()=>pf.flipPrev();next.onclick=()=>pf.flipNext();
+    document.addEventListener('keydown',e=>{
+      if(document.getElementById('lb').classList.contains('open'))return;
+      const r=el.getBoundingClientRect(); if(r.bottom<0||r.top>innerHeight)return;
+      if(e.key==='ArrowRight')pf.flipNext(); if(e.key==='ArrowLeft')pf.flipPrev();
+    });
+  })();
+
+  // lightbox das páginas em destaque
+  const figs=[...document.querySelectorAll('#spreads figure')];
+  const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
+  let cur=0;
+  const show=i=>{cur=(i+figs.length)%figs.length;const im=figs[cur].querySelector('img');lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=figs[cur].querySelector('h3').textContent+'  ·  '+(cur+1)+'/'+figs.length};
+  const open=i=>{show(i);lb.classList.add('open');document.body.style.overflow='hidden';document.getElementById('lbX').focus()};
+  const close=()=>{lb.classList.remove('open');document.body.style.overflow=''};
+  figs.forEach((f,i)=>{f.tabIndex=0;f.addEventListener('click',()=>open(i));f.addEventListener('keydown',e=>{if(e.key==='Enter')open(i)})});
+  document.getElementById('lbX').onclick=close;
+  document.getElementById('lbPrev').onclick=()=>show(cur-1);
+  document.getElementById('lbNext').onclick=()=>show(cur+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+</script>
+</body>
+</html>
