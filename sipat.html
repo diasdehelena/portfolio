@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SIPAT 2026 · Grupo São Pietro — Case · Helena Dias</title>
+<meta name="description" content="Case de campanha de comunicação interna: SIPAT 2026 do Grupo São Pietro, com peça conceito, carrossel para o Canal, cartaz A4 e e-mail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f1ec; --ink:#121212; --muted:#6b6862; --line:#d9d5cc; --accent:#3e8f26; --navy:#172B48; --sky:#69B64C; --brand:#172B48; --pad:clamp(16px,4vw,48px);}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.serif{font-family:"Instrument Serif",serif;font-weight:400;font-style:italic}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:20;color:#fff;border-bottom:1px solid transparent;transition:background .35s,color .35s,border-color .35s}
+header.tint{background:color-mix(in srgb,var(--navy) 94%,transparent);backdrop-filter:blur(10px);border-bottom-color:#ffffff1f}
+header.solid{background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);color:var(--ink);border-bottom-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px var(--pad)}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:18px}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;border:1px solid currentColor;border-radius:999px;padding:11px 18px;transition:background .2s,color .2s,border-color .2s}
+header:not(.solid) .pill{border-color:#ffffffb3}
+header:not(.solid) .pill:hover{background:#fff;color:var(--ink);border-color:#fff}
+header.solid .pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* HERO */
+.c-hero{background:radial-gradient(ellipse 80% 70% at 80% 0%,#1f4f7e 0%,rgba(31,79,126,0) 60%),var(--navy);color:#fff;padding:clamp(110px,16vh,160px) var(--pad) 0;position:relative;overflow:hidden}
+.c-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.c-hero>*{position:relative;z-index:1}
+.kicker{display:flex;justify-content:space-between;gap:16px;font-size:14px;color:#ffffffb3;padding-bottom:14px;border-bottom:1px solid #ffffff33}
+.kicker b{color:#fff;font-weight:500}
+.c-hero h1{font-size:clamp(54px,12vw,184px);line-height:.86;letter-spacing:-.05em;font-weight:800;text-transform:uppercase;margin-top:clamp(28px,5vw,56px)}
+.c-hero h1 .serif{display:block;text-transform:none;letter-spacing:-.02em;color:var(--sky);font-size:.4em;line-height:1.15;margin-top:.15em}
+.c-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(24px,5vw,80px);margin-top:clamp(32px,5vw,64px);align-items:end}
+.c-intro p{font-size:clamp(18px,1.7vw,23px);line-height:1.35;max-width:36ch}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+.meta div{border-top:1px solid #ffffff40;padding-top:10px}
+.meta small{display:block;font-size:13px;color:#ffffffa6;margin-bottom:2px}
+.meta span{font-size:16px;font-weight:500}
+.cover{margin:clamp(40px,6vw,80px) 0 0;border-radius:14px 14px 0 0;overflow:hidden}
+.cover img{width:100%;height:auto}
+@media(max-width:820px){.c-intro{grid-template-columns:1fr}.cover{margin-top:40px}}
+
+/* SECTIONS */
+section.block{padding:clamp(72px,10vw,140px) var(--pad);border-bottom:1px solid var(--line)}
+.label{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin-bottom:clamp(28px,4vw,48px);padding-bottom:14px;border-bottom:1px solid var(--line)}
+.label b{color:var(--ink);font-weight:500}
+h2{font-size:clamp(34px,5.6vw,80px);line-height:.98;letter-spacing:-.04em;font-weight:600;max-width:18ch}
+h2 .serif{color:var(--accent);letter-spacing:-.01em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,96px);align-items:start}
+.prose p{font-size:clamp(17px,1.5vw,20px);margin-bottom:18px;max-width:54ch}
+.prose p strong{font-weight:600}
+@media(max-width:820px){.two{grid-template-columns:1fr}}
+
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(40px,6vw,72px)}
+.facts div{border-top:2px solid var(--ink);padding-top:14px}
+.facts b{display:block;font-size:clamp(36px,4.4vw,64px);letter-spacing:-.04em;font-weight:600;line-height:1}
+.facts span{display:block;color:var(--muted);font-size:15px;margin-top:8px;max-width:22ch}
+@media(max-width:820px){.facts{grid-template-columns:1fr 1fr;row-gap:28px}}
+
+/* FLIPBOOK */
+.reader{background:var(--navy);color:#fff;padding:clamp(72px,10vw,140px) var(--pad)}
+.reader .label{color:#ffffffa6;border-bottom-color:#ffffff2e}
+.reader .label b{color:#fff}
+.reader h2{color:#fff}
+.reader h2 .serif{color:var(--sky)}
+.reader .lead{color:#ffffffcc;font-size:clamp(17px,1.5vw,20px);max-width:52ch;margin-top:20px}
+.book-wrap{max-width:min(1180px,calc((100vh - 230px) * 1.414));margin:clamp(40px,6vw,72px) auto 0;position:relative}
+@media(max-width:700px){.book-wrap{max-width:min(100%,calc((100vh - 260px) * .707))}.book-ctrl{gap:8px}.book-ctrl button{padding:10px 14px;font-size:14px;white-space:nowrap}.book-ctrl .count{min-width:0;font-size:14px}}
+#book{margin:0 auto}
+#book .pg{background:#fff}
+#book .pg img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;user-select:none}
+.book-ctrl{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:28px}
+.book-ctrl button{background:none;border:1px solid #ffffff80;color:#fff;border-radius:999px;font:inherit;font-size:15px;padding:11px 20px;cursor:pointer;transition:background .2s,color .2s}
+.book-ctrl button:hover{background:#fff;color:var(--navy)}
+.book-ctrl button:disabled{opacity:.35;cursor:default;background:none;color:#fff}
+.book-ctrl .count{min-width:120px;text-align:center;font-variant-numeric:tabular-nums;color:#ffffffcc;font-size:15px}
+.book-hint{text-align:center;color:#ffffff8c;font-size:13px;margin-top:12px}
+.book-fallback{display:none}
+
+/* DECISIONS */
+.decisions{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(36px,5vw,64px)}
+.dec{border-top:2px solid var(--ink);padding-top:18px}
+.dec .n{font-size:14px;color:var(--accent);font-weight:600}
+.dec h3{font-size:clamp(22px,2.1vw,28px);letter-spacing:-.025em;line-height:1.1;margin:clamp(20px,3vw,36px) 0 10px;font-weight:600}
+.dec p{color:var(--muted);font-size:16px;max-width:34ch}
+@media(max-width:1000px){.decisions{grid-template-columns:1fr 1fr;row-gap:40px}}
+@media(max-width:560px){.decisions{grid-template-columns:1fr}}
+
+/* SPREADS */
+.spreads{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px) clamp(16px,2.5vw,32px);margin-top:clamp(36px,5vw,64px)}
+.spread figure{margin:0;cursor:zoom-in}
+.spread .shot{border-radius:10px;overflow:hidden;box-shadow:0 24px 48px -28px rgba(12,32,65,.45),0 0 0 1px rgba(0,0,0,.05);background:#fff}
+.spread figcaption{display:grid;grid-template-columns:auto 1fr;column-gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.spread figcaption b{font-size:14px;color:var(--accent);font-weight:600}
+.spread figcaption h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:-.02em;font-weight:600;line-height:1.15}
+.spread figcaption p{grid-column:2;color:var(--muted);font-size:15px;margin-top:4px;max-width:48ch}
+.spread.wide{grid-column:span 2}
+@media(max-width:820px){.spreads{grid-template-columns:1fr}.spread.wide{grid-column:auto}}
+
+/* MOCKUPS */
+.mocks{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(16px,2.5vw,32px);margin-top:clamp(36px,5vw,64px);align-items:start}
+.mock figure{margin:0}
+.mock .im{border-radius:14px;overflow:hidden}
+.mock .im img{width:100%;height:auto}
+.mock figcaption{display:grid;grid-template-columns:auto 1fr;column-gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.mock figcaption b{font-size:14px;color:var(--accent);font-weight:600}
+.mock figcaption h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:-.02em;font-weight:600}
+.mock figcaption p{grid-column:2;color:var(--muted);font-size:15px;margin-top:4px;max-width:46ch}
+.mock.full{grid-column:span 2}
+@media(max-width:820px){.mocks{grid-template-columns:1fr}.mock.full{grid-column:auto}}
+
+/* VISUAL SYSTEM */
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:clamp(36px,5vw,64px)}
+.sw{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.sw div{aspect-ratio:1/1.1}
+.sw p{padding:12px 14px;font-size:14px;line-height:1.3}
+.sw p span{display:block;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.type{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.type>div{border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3vw,36px);background:#fff;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:240px}
+.type .aa{font-size:clamp(72px,9vw,140px);line-height:.9;color:var(--navy)}
+.type .sample{font-size:clamp(18px,1.8vw,24px);line-height:1.3;max-width:30ch;color:var(--navy)}
+.type small{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:820px){.swatches{grid-template-columns:repeat(3,1fr)}.type{grid-template-columns:1fr}}
+@media(max-width:480px){.swatches{grid-template-columns:1fr 1fr}}
+
+/* LIGHTBOX */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(8,16,32,.95);display:none;align-items:center;justify-content:center;padding:clamp(56px,7vw,80px) clamp(12px,4vw,64px)}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px}
+.lb p{position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#ffffffcc;font-size:14px;padding:0 16px}
+.lb button{position:absolute;background:none;border:1px solid #ffffff66;color:#fff;border-radius:999px;font:inherit;font-size:15px;padding:10px 16px;cursor:pointer}
+.lb button:hover{background:#fff;color:#121212}
+.lb .x{top:16px;right:16px}.lb .prev{left:16px;top:50%;transform:translateY(-50%)}.lb .next{right:16px;top:50%;transform:translateY(-50%)}
+@media(max-width:600px){.lb .prev,.lb .next{top:auto;bottom:52px;transform:none}}
+
+/* CTA */
+.cta{position:relative;background:var(--brand);color:#fff;padding:clamp(80px,12vw,150px) var(--pad) 32px;overflow:hidden}
+.cta::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.2;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.cta>*{position:relative;z-index:1}
+.cta h2{color:#fff;font-size:clamp(46px,9vw,140px);max-width:none;line-height:.9;font-weight:800;letter-spacing:-.055em;text-transform:uppercase}
+.cta h2 .serif{color:#fff;text-transform:none;letter-spacing:-.02em}
+.cta .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:500;font-size:15px;transition:background .2s,color .2s}
+.btn.w{background:#fff;color:#121212}.btn.w:hover{background:#121212;color:#fff}
+.btn.o{border:1px solid #ffffffb3;color:#fff}.btn.o:hover{background:#fff;color:#121212}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#ffffffa6;font-size:13px;margin-top:clamp(64px,10vw,120px);padding-top:20px;border-top:1px solid #ffffff33}
+footer a:hover{color:#fff}
+.next-case{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:28px;padding-top:20px;border-top:1px solid #ffffff33;font-size:15px}
+.next-case a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+
+.logo-stage{margin-top:clamp(36px,5vw,64px);display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ls{border-radius:14px;display:flex;align-items:center;justify-content:center;padding:clamp(36px,6vw,90px);min-height:clamp(220px,28vw,420px)}
+.ls.navy{background:var(--navy)}.ls.light{background:#fff;border:1px solid var(--line)}
+.ls img{width:100%;max-width:520px}
+.anatomy{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);margin-top:clamp(28px,4vw,48px)}
+.anatomy div{border-top:2px solid var(--ink);padding-top:16px}
+.anatomy b{display:block;font-size:14px;color:var(--accent);font-weight:600}
+.anatomy h3{font-size:clamp(21px,2vw,26px);letter-spacing:-.025em;margin:clamp(14px,2vw,24px) 0 8px;font-weight:600}
+.anatomy p{color:var(--muted);font-size:16px;max-width:36ch}
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,32px);margin-top:clamp(36px,5vw,64px)}
+.app figure{margin:0}
+.app .im{border-radius:14px;overflow:hidden;background:#ddd}
+.app .im img{width:100%;height:auto}
+.app.wide{grid-column:span 2}
+.app figcaption{display:grid;grid-template-columns:auto 1fr;column-gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.app figcaption b{font-size:14px;color:var(--accent);font-weight:600}
+.app figcaption h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:-.02em;font-weight:600;line-height:1.15}
+.app figcaption p{grid-column:2;color:var(--muted);font-size:15px;margin-top:4px;max-width:48ch}
+@media(max-width:900px){.logo-stage,.apps,.anatomy{grid-template-columns:1fr}.app.wide{grid-column:auto}}
+.part{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:#ffffffb3}
+.part i{width:28px;height:2px;background:var(--accent)}
+
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1.2vw,16px);margin-top:clamp(36px,5vw,64px)}
+.strip figure,.flats figure,.solo figure{margin:0;cursor:zoom-in}
+.strip img,.flats img{width:100%;height:auto;border-radius:8px;box-shadow:0 18px 36px -24px rgba(10,20,40,.45),0 0 0 1px rgba(0,0,0,.05)}
+.strip figcaption,.flats figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+@media(max-width:900px){.strip{grid-template-columns:repeat(3,1fr)}}
+.flats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,2vw,28px);margin-top:clamp(36px,5vw,64px)}
+@media(max-width:820px){.flats{grid-template-columns:1fr 1fr}}
+.solo{margin-top:clamp(36px,5vw,64px)}
+.solo img{width:100%;height:auto;border-radius:14px}
+.solo figcaption{display:grid;grid-template-columns:auto 1fr;column-gap:14px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.solo figcaption b{font-size:14px;color:var(--accent);font-weight:600}
+.solo figcaption h3{font-size:clamp(19px,1.8vw,24px);letter-spacing:-.02em;font-weight:600;line-height:1.15}
+.solo figcaption p{grid-column:2;color:var(--muted);font-size:15px;margin-top:4px;max-width:56ch}
+.email{border-radius:14px;background:#e9ece6;padding:clamp(20px,4vw,48px);display:flex;justify-content:center;max-height:min(1100px,150vw);overflow:auto;cursor:zoom-in}
+.email img{width:min(100%,460px);height:auto;box-shadow:0 24px 48px -28px rgba(12,32,65,.5)}
+.typeimg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.typeimg div{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+.typeimg small{display:block;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;padding:14px 18px 0}
+@media(max-width:820px){.typeimg{grid-template-columns:1fr}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(40px,6vw,72px)}
+.steps div{border-top:2px solid var(--ink);padding-top:14px}
+.steps b{display:block;font-size:14px;color:var(--accent);font-weight:600}
+.steps h3{font-size:clamp(26px,3vw,44px);letter-spacing:-.03em;font-weight:600;margin-top:10px;line-height:1}
+.steps p{color:var(--muted);font-size:15px;margin-top:8px;max-width:26ch}
+@media(max-width:820px){.steps{grid-template-columns:1fr 1fr;row-gap:28px}}
+.zoom{cursor:zoom-in}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <nav class="nav">
+    <a href="index.html" class="logo">Helena Dias</a>
+    <a href="index.html#trabalhos" class="pill">← Todos os trabalhos</a>
+  </nav>
+</header>
+
+<main>
+  <section class="c-hero" id="topo">
+    <div class="kicker"><b>Case 03</b><span>Saúde · Comunicação interna</span></div>
+    <h1>SIPAT 2026 <span class="serif">Segurança e bem-estar: compromisso de todos</span></h1>
+    <div class="c-intro">
+      <p>Campanha da Semana Interna de Prevenção de Acidentes do Trabalho do Grupo São Pietro: peça conceito, carrossel para o Canal, cartaz A4 para o mural e e-mail para os colaboradores.</p>
+      <div class="meta">
+        <div><small>Cliente</small><span>Grupo São Pietro</span></div>
+        <div><small>Ano</small><span>2026</span></div>
+        <div><small>Escopo</small><span>Campanha · Comunicação interna</span></div>
+        <div><small>Entregas</small><span>9 peças em 4 canais</span></div>
+      </div>
+    </div>
+    <figure class="cover">
+      <img src="projetos/sipat/mock-tv.jpg" alt="Recepção de hospital com uma TV na parede exibindo a peça conceito da SIPAT 2026" width="2400" height="1357">
+    </figure>
+  </section>
+
+  <section class="block">
+    <div class="label"><b>01 ( Desafio )</b><span>Briefing</span></div>
+    <div class="two">
+      <h2 class="rv">Uma semana para <span class="serif">cuidar de quem cuida.</span></h2>
+      <div class="prose rv">
+        <p>A SIPAT 2026 do Grupo São Pietro acontece de 08 a 10 de dezembro, no Auditório HBO, com palestras, terapias integrativas, ginástica laboral e coffee breaks para os colaboradores.</p>
+        <p>O briefing chegou com o tema e a programação preliminar. O desafio era transformar isso em uma campanha que falasse com equipes de áreas e turnos diferentes, em <strong>quatro canais ao mesmo tempo</strong>: telas, Canal, mural e e-mail, sem perder a unidade.</p>
+        <p>Também atualizei o logo da SIPAT do ano anterior para a edição 2026.</p>
+      </div>
+    </div>
+    <div class="facts">
+      <div><b>3</b><span>dias de programação</span></div>
+      <div><b>4</b><span>canais de comunicação</span></div>
+      <div><b>9</b><span>peças entregues</span></div>
+      <div><b>1</b><span>conceito para todas as peças</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label"><b>02 ( Conceito )</b><span>Direção de arte</span></div>
+    <h2 class="rv">O tema dividido <span class="serif">em duas cores.</span></h2>
+    <figure class="solo rv"><img class="zoom" data-lb="kv" src="projetos/sipat/peca-conceito.jpg" alt="Peça conceito da SIPAT 2026: tema em bloco verde e azul-marinho com uma profissional de saúde ao centro" loading="lazy" width="2400" height="1350">
+      <figcaption><b>KV</b><h3>Peça conceito</h3><p>A base de toda a campanha, pensada para as telas do hospital e para abrir as apresentações da semana.</p></figcaption></figure>
+    <div class="decisions">
+      <div class="dec rv"><span class="n">01</span><h3>Duas metades de uma mesma frase</h3><p>“Segurança e bem-estar” fica no verde e “compromisso de todos” no azul-marinho. A diagonal liga as duas partes do tema.</p></div>
+      <div class="dec rv"><span class="n">02</span><h3>Gente da casa no centro</h3><p>Profissionais da saúde aparecem entre os dois blocos, para o colaborador se reconhecer na campanha.</p></div>
+      <div class="dec rv"><span class="n">03</span><h3>Logo atualizado</h3><p>O selo verde do logo da SIPAT ganhou o “26”, mantendo a identidade das edições anteriores.</p></div>
+      <div class="dec rv"><span class="n">04</span><h3>Textura de papel</h3><p>Uma textura sutil nos fundos tira a frieza das cores chapadas e dá um toque mais humano.</p></div>
+      <div class="dec rv"><span class="n">05</span><h3>Datas sempre visíveis</h3><p>Data e local aparecem em todas as peças, com ícones simples, para a informação principal nunca se perder.</p></div>
+      <div class="dec rv"><span class="n">06</span><h3>Marca São Pietro</h3><p>Azul-marinho e azul São Pietro como base, e o verde da SIPAT como cor de destaque.</p></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label"><b>03 ( Canal )</b><span>Carrossel em 6 lâminas</span></div>
+    <div class="two">
+      <h2 class="rv">A programação <span class="serif">dia a dia.</span></h2>
+      <div class="prose rv">
+        <p>No Canal, a comunicação interna do grupo, a campanha virou um carrossel de seis lâminas: capa, convite, um dia de programação por lâmina e um resumo final para anotar na agenda.</p>
+        <p>Cada atividade ganhou um ícone e um card próprio, para a leitura ficar rápida até na tela do celular.</p>
+      </div>
+    </div>
+    <div class="strip rv">
+      <figure><img data-lb="car" src="projetos/sipat/carrossel-01.jpg" alt="Capa do carrossel: SIPAT 2026, segurança e bem-estar, compromisso de todos" loading="lazy" width="1080" height="1350"><figcaption>1/6</figcaption></figure>
+      <figure><img data-lb="car" src="projetos/sipat/carrossel-02.jpg" alt="Lâmina 2: vem aí a SIPAT 2026, de 08 a 10 de dezembro" loading="lazy" width="1080" height="1350"><figcaption>2/6</figcaption></figure>
+      <figure><img data-lb="car" src="projetos/sipat/carrossel-03.jpg" alt="Lâmina 3: programação de 08/12, terça-feira" loading="lazy" width="1080" height="1350"><figcaption>3/6</figcaption></figure>
+      <figure><img data-lb="car" src="projetos/sipat/carrossel-04.jpg" alt="Lâmina 4: programação de 09/12, quarta-feira" loading="lazy" width="1080" height="1350"><figcaption>4/6</figcaption></figure>
+      <figure><img data-lb="car" src="projetos/sipat/carrossel-05.jpg" alt="Lâmina 5: programação de 10/12, quinta-feira" loading="lazy" width="1080" height="1350"><figcaption>5/6</figcaption></figure>
+      <figure><img data-lb="car" src="projetos/sipat/carrossel-06.jpg" alt="Lâmina 6: anote na agenda, informações gerais" loading="lazy" width="1080" height="1350"><figcaption>6/6</figcaption></figure>
+    </div>
+    <figure class="solo rv"><img class="zoom" data-lb="mk" src="projetos/sipat/mock-celular.jpg" alt="Celular sobre a mesa mostrando o carrossel da SIPAT 2026 no Canal, ao lado de café, crachá e caneta" loading="lazy" width="1600" height="1200">
+      <figcaption><b>Mockup</b><h3>No celular do colaborador</h3><p>O carrossel publicado no Canal.</p></figcaption></figure>
+  </section>
+
+  <section class="block">
+    <div class="label"><b>04 ( Mural e e-mail )</b><span>Impresso e digital</span></div>
+    <h2 class="rv">Do corredor <span class="serif">à caixa de entrada.</span></h2>
+    <div class="mocks">
+      <div class="mock rv"><figure>
+        <div class="email" data-lb="mural" data-full="projetos/sipat/email.jpg" role="img" aria-label="E-mail da SIPAT 2026"><img src="projetos/sipat/email.jpg" alt="E-mail da SIPAT 2026 com a programação completa e o botão de participação" loading="lazy" width="1200" height="5200"></div>
+        <figcaption><b>01</b><h3>E-mail</h3><p>Versão completa da programação para quem recebe a comunicação pelo e-mail corporativo.</p></figcaption>
+      </figure></div>
+      <div class="mock rv"><figure>
+        <div class="im"><img class="zoom" data-lb="mural" src="projetos/sipat/mock-mural.jpg" alt="Cartaz A4 da SIPAT 2026 preso com tachinhas em um mural no corredor do hospital" loading="lazy" width="2048" height="1536"></div>
+        <figcaption><b>02</b><h3>Cartaz A4 para o mural</h3><p>Os três dias lado a lado, com destaque para as palestras e as informações gerais no rodapé.</p></figcaption>
+      </figure></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label"><b>05 ( Sistema visual )</b><span>Cores e tipografia</span></div>
+    <h2 class="rv">Verde de cuidado, <span class="serif">azul de confiança.</span></h2>
+    <div class="swatches rv">
+      <div class="sw"><div style="background:#172B48"></div><p>Azul-marinho<span>#172B48</span></p></div>
+      <div class="sw"><div style="background:#69B64C"></div><p>Verde SIPAT<span>#69B64C</span></p></div>
+      <div class="sw"><div style="background:#195B99"></div><p>Azul São Pietro<span>#195B99</span></p></div>
+      <div class="sw"><div style="background:#36B3E8"></div><p>Azul-céu<span>#36B3E8</span></p></div>
+      <div class="sw"><div style="background:#F2F4F0"></div><p>Gelo<span>#F2F4F0</span></p></div>
+    </div>
+    <div class="typeimg rv">
+      <div><small>Títulos · LT Wave</small><img src="projetos/sipat/tipo-lt-wave.jpg" alt="Amostra da fonte LT Wave" loading="lazy"></div>
+      <div><small>Textos · Gotham</small><img src="projetos/sipat/tipo-gotham.jpg" alt="Amostra da fonte Gotham" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Gostou <span class="serif">do projeto?</span></h2>
+    <div class="row">
+      <a class="btn w" href="index.html#trabalhos">Ver outros trabalhos</a>
+      <a class="btn o" href="mailto:diasdehelenadesign@gmail.com">diasdehelenadesign@gmail.com</a>
+      <a class="btn o" href="https://wa.me/5551980593552" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div class="next-case"><a href="sao-pietro-news.html">← São Pietro News</a><a href="magno-moinhos.html">Magno Moinhos →</a></div>
+    <footer>
+      <span>© <span id="yr">2026</span> Helena Dias</span>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </footer>
+  </section>
+</main>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada"><button class="x" aria-label="Fechar">Fechar ✕</button><button class="prev" aria-label="Anterior">←</button><button class="next" aria-label="Próxima">→</button><img alt=""><p></p></div>
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const hdr=document.getElementById('hdr'), heroCase=document.getElementById('topo');
+  const onScroll=()=>{const y=window.scrollY,past=y>heroCase.offsetHeight-80;hdr.classList.toggle('solid',past);hdr.classList.toggle('tint',!past&&y>30)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  const lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('p');let grp=[],cur=0;
+  const show=()=>{const el=grp[cur];lbImg.src=el.dataset.full||el.src;const t=el.alt||el.getAttribute('aria-label')||'';lbImg.alt=t;lbCap.textContent=t};
+  const open=(g,i)=>{grp=g;cur=i;show();lb.classList.add('open');document.body.style.overflow='hidden'};
+  const close=()=>{lb.classList.remove('open');document.body.style.overflow=''};
+  lb.querySelector('.x').onclick=close;lb.querySelector('.prev').onclick=()=>{cur=(cur-1+grp.length)%grp.length;show()};lb.querySelector('.next').onclick=()=>{cur=(cur+1)%grp.length;show()};
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')lb.querySelector('.prev').click();if(e.key==='ArrowRight')lb.querySelector('.next').click()});
+  const groups={};document.querySelectorAll('[data-lb]').forEach(el=>{(groups[el.dataset.lb]=groups[el.dataset.lb]||[]).push(el)});
+  Object.values(groups).forEach(g=>g.forEach((el,i)=>{el.tabIndex=0;el.addEventListener('click',()=>open(g,i));el.addEventListener('keydown',e=>{if(e.key==='Enter')open(g,i)})}));
+
+</script>
+</body>
+</html>
