@@ -98,6 +98,15 @@ h2 .serif{color:var(--accent);letter-spacing:-.01em}
 @media(max-width:1000px){.decisions{grid-template-columns:1fr 1fr;row-gap:40px}}
 @media(max-width:560px){.decisions{grid-template-columns:1fr}}
 
+.infos{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,24px);margin-top:clamp(36px,5vw,64px)}
+.infos figure{margin:0;cursor:zoom-in}
+.infos .shot{border-radius:6px;overflow:hidden;box-shadow:0 20px 40px -26px rgba(12,32,65,.45),0 0 0 1px rgba(0,0,0,.05);background:#fff}
+.infos .shot img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.infos figure:hover .shot img{transform:scale(1.03)}
+.infos figcaption{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.infos figcaption h3{font-size:clamp(17px,1.4vw,20px);letter-spacing:-.02em;font-weight:600;line-height:1.2}
+.infos figcaption p{color:var(--muted);font-size:14px;margin-top:4px}
+@media(max-width:900px){.infos{grid-template-columns:1fr 1fr}}
 /* SPREADS */
 .spreads{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px) clamp(16px,2.5vw,32px);margin-top:clamp(36px,5vw,64px)}
 .spread figure{margin:0;cursor:zoom-in}
@@ -184,11 +193,11 @@ footer a:hover{color:#fff}
     <div class="kicker"><b>Case 05</b><span>Editorial · Saúde</span></div>
     <h1>São Pietro News <span class="serif">Revista do Grupo São Pietro</span></h1>
     <div class="c-intro">
-      <p>Projeto gráfico e diagramação da revista institucional do Grupo São Pietro, pensada para circular impressa nas unidades e em versão digital.</p>
+      <p>Projeto gráfico, diagramação no InDesign e infografia da revista institucional do Grupo São Pietro, pensada para circular impressa nas unidades e em versão digital.</p>
       <div class="meta">
         <div><small>Cliente</small><span>Grupo São Pietro</span></div>
         <div><small>Edição</small><span>Novembro de 2026</span></div>
-        <div><small>Escopo</small><span>Design Editorial · Diagramação</span></div>
+        <div><small>Escopo</small><span>Design Editorial · Infografia · InDesign</span></div>
         <div><small>Formatos</small><span>Impresso A4 e digital</span></div>
       </div>
     </div>
@@ -274,9 +283,27 @@ footer a:hover{color:#fff}
     </div>
   </section>
 
+  <!-- INFOGRAFIA -->
+  <section class="block">
+    <div class="label"><b>04 ( Infografia )</b><span>Dados e design da informação</span></div>
+    <div class="two">
+      <h2 class="rv">Informação densa, <span class="serif">leitura fácil.</span></h2>
+      <div class="prose rv">
+        <p>Criei todos os infográficos da revista: mapas, diagramas, números de mercado, linha do tempo e uma ilustração médica. Em vez de longos parágrafos com dados, a informação vira ícones, cards e esquemas.</p>
+        <p>O desafio era tornar temas técnicos, como o envelhecimento da população e doenças oculares, <strong>compreensíveis para um público leigo e 60+</strong>, sem perder a precisão.</p>
+      </div>
+    </div>
+    <div class="infos" id="infos">
+      <figure class="info rv"><div class="shot"><img src="projetos/sao-pietro/pages/p13.jpg" alt="Página da revista com infográfico: envelhecimento e mercado" loading="lazy" width="1000" height="1414"></div><figcaption><h3>Envelhecimento e mercado</h3><p>Mapa da nova geografia da longevidade e números do modelo Senior Living, com ícones e destaques.</p></figcaption></figure>
+      <figure class="info rv"><div class="shot"><img src="projetos/sao-pietro/pages/p12.jpg" alt="Página da revista com infográfico: uma operação em números" loading="lazy" width="1000" height="1414"></div><figcaption><h3>Uma operação em números</h3><p>Indicadores da operação organizados em blocos, para o leitor achar cada número sem ler o texto todo.</p></figcaption></figure>
+      <figure class="info rv"><div class="shot"><img src="projetos/sao-pietro/pages/p09.jpg" alt="Página da revista com infográfico: cuidado multidisciplinar" loading="lazy" width="1000" height="1414"></div><figcaption><h3>Cuidado multidisciplinar</h3><p>Diagrama circular com as especialidades da equipe em volta do morador, no centro do cuidado.</p></figcaption></figure>
+      <figure class="info rv"><div class="shot"><img src="projetos/sao-pietro/pages/p20.jpg" alt="Página da revista com infográfico: como a catarata afeta a visão" loading="lazy" width="1000" height="1414"></div><figcaption><h3>Como a catarata afeta a visão</h3><p>Ilustração do olho com legenda numerada, explicando a doença de forma visual para um público leigo.</p></figcaption></figure>
+    </div>
+  </section>
+
   <!-- PÁGINAS EM DESTAQUE -->
   <section class="block">
-    <div class="label"><b>04 ( Páginas em destaque )</b><span>Clique para ampliar</span></div>
+    <div class="label"><b>05 ( Páginas em destaque )</b><span>Clique para ampliar</span></div>
     <h2 class="rv">Página a página, <span class="serif">o mesmo cuidado.</span></h2>
     <div class="spreads" id="spreads">
       <div class="spread wide rv"><figure>
@@ -304,7 +331,7 @@ footer a:hover{color:#fff}
 
   <!-- MOCKUPS -->
   <section class="block">
-    <div class="label"><b>05 ( Impresso e digital )</b><span>A revista em uso</span></div>
+    <div class="label"><b>06 ( Impresso e digital )</b><span>A revista em uso</span></div>
     <h2 class="rv">Do papel <span class="serif">à tela.</span></h2>
     <div class="mocks">
       <div class="mock full rv"><figure>
@@ -324,7 +351,7 @@ footer a:hover{color:#fff}
 
   <!-- SISTEMA -->
   <section class="block">
-    <div class="label"><b>06 ( Sistema visual )</b><span>Cores e tipografia</span></div>
+    <div class="label"><b>07 ( Sistema visual )</b><span>Cores e tipografia</span></div>
     <h2 class="rv">Azul institucional, <span class="serif">com calor humano.</span></h2>
     <div class="swatches rv">
       <div class="sw"><div style="background:#0c2041"></div><p>Azul-marinho<span>#0C2041</span></p></div>
@@ -399,7 +426,7 @@ footer a:hover{color:#fff}
   })();
 
   // lightbox das páginas em destaque
-  const figs=[...document.querySelectorAll('#spreads figure')];
+  const figs=[...document.querySelectorAll('#infos figure, #spreads figure')];
   const lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
   let cur=0;
   const show=i=>{cur=(i+figs.length)%figs.length;const im=figs[cur].querySelector('img');lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=figs[cur].querySelector('h3').textContent+'  ·  '+(cur+1)+'/'+figs.length};
