@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f3f1ec; --ink:#121212; --muted:#6b6862; --line:#d9d5cc; --accent:#195B99; --navy:#09111C; --sky:#36B3E8; --brand:#09111C; --pad:clamp(16px,4vw,48px);}
+:root{--bg:#f1f2f3; --ink:#121417; --muted:#62666c; --line:#d6d9dd; --accent:#195B99; --navy:#121417; --sky:#36B3E8; --brand:#195B99; --pad:clamp(16px,4vw,48px);}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font-family:"Inter Tight",system-ui,sans-serif;font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -29,7 +29,7 @@ header:not(.solid) .pill:hover{background:#fff;color:var(--ink);border-color:#ff
 header.solid .pill:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
 /* HERO */
-.c-hero{background:radial-gradient(ellipse 80% 70% at 80% 0%,#123a66 0%,rgba(18,58,102,0) 60%),var(--navy);color:#fff;padding:clamp(110px,16vh,160px) var(--pad) 0;position:relative;overflow:hidden}
+.c-hero{background:radial-gradient(ellipse 80% 70% at 80% 0%,#2b3a4d 0%,rgba(43,58,77,0) 60%),var(--navy);color:#fff;padding:clamp(110px,16vh,160px) var(--pad) 0;position:relative;overflow:hidden}
 .c-hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .c-hero>*{position:relative;z-index:1}
 .kicker{display:flex;justify-content:space-between;gap:16px;font-size:14px;color:#ffffffb3;padding-bottom:14px;border-bottom:1px solid #ffffff33}
@@ -180,7 +180,6 @@ footer a:hover{color:#fff}
 .part{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:#ffffffb3}
 .part i{width:28px;height:2px;background:var(--accent)}
 
-@media(max-width:900px){.strip.ia{grid-template-columns:1fr 1fr!important}}
 .strip{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1.2vw,16px);margin-top:clamp(36px,5vw,64px)}
 .strip figure,.flats figure,.solo figure{margin:0;cursor:zoom-in}
 .strip img,.flats img{width:100%;height:auto;border-radius:8px;box-shadow:0 18px 36px -24px rgba(10,20,40,.45),0 0 0 1px rgba(0,0,0,.05)}
@@ -207,6 +206,23 @@ footer a:hover{color:#fff}
 .steps p{color:var(--muted);font-size:15px;margin-top:8px;max-width:26ch}
 @media(max-width:820px){.steps{grid-template-columns:1fr 1fr;row-gap:28px}}
 .zoom{cursor:zoom-in}
+
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.2vw,16px);margin-top:clamp(36px,5vw,64px);align-items:start}
+.pgrid figure{margin:0;cursor:zoom-in;overflow:hidden;border-radius:10px}
+.pgrid img{width:100%;height:auto;display:block;filter:grayscale(1);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.pgrid figure:hover img{transform:scale(1.03)}
+@media(max-width:820px){.pgrid{grid-template-columns:1fr 1fr}}
+.slides{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,1.6vw,20px);margin-top:clamp(36px,5vw,64px)}
+.slides figure{margin:0;cursor:zoom-in}
+.slides img{width:100%;height:auto;border-radius:8px;box-shadow:0 18px 36px -24px rgba(10,20,40,.4),0 0 0 1px rgba(0,0,0,.06)}
+.slides figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+@media(max-width:700px){.slides{grid-template-columns:1fr}}
+.quote{margin-top:clamp(40px,6vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+.quote img{width:100%;height:auto;border-radius:14px;cursor:zoom-in}
+.quote blockquote{font-size:clamp(26px,3.2vw,46px);line-height:1.08;letter-spacing:-.03em;font-weight:600;max-width:16ch}
+.quote blockquote span{display:block;font-size:15px;letter-spacing:0;font-weight:400;color:var(--muted);margin-top:18px;max-width:40ch;line-height:1.5}
+@media(max-width:820px){.quote{grid-template-columns:1fr}}
+.c-hero .cover.wide img{aspect-ratio:2030/790;object-fit:cover}
 </style>
 </head>
 <body>
@@ -220,7 +236,7 @@ footer a:hover{color:#fff}
 
 <main>
   <section class="c-hero" id="topo">
-    <div class="kicker"><b>Case 05</b><span>Saúde · Desenvolvimento de lideranças</span></div>
+    <div class="kicker"><b>Case 07</b><span>Saúde · Desenvolvimento de lideranças</span></div>
     <h1>Pit Stop <span class="serif">da Liderança São Pietro</span></h1>
     <div class="c-intro">
       <p>Identidade visual da campanha do Pit Stop da Liderança, programa de desenvolvimento de lideranças do Grupo São Pietro: peça conceito, save the date e a apresentação do programa.</p>
@@ -232,7 +248,7 @@ footer a:hover{color:#fff}
       </div>
     </div>
     <figure class="cover">
-      <img src="projetos/pit-stop/mock-auditorio.jpg" alt="Auditório com o telão exibindo a abertura do Pit Stop da Liderança, com o piloto entre rastros de luz azul" width="2400" height="1357">
+      <img src="projetos/pit-stop/mock-auditorio.jpg" alt="Auditório com o telão exibindo a capa da apresentação do Pit Stop da Liderança, com o piloto caminhando pela pista curva" width="2400" height="1357">
     </figure>
   </section>
 
@@ -254,51 +270,49 @@ footer a:hover{color:#fff}
   </section>
 
   <section class="block">
-    <div class="label"><b>02 ( Direção de arte )</b><span>Duas versões apresentadas</span></div>
+    <div class="label"><b>02 ( Direção de arte )</b><span>Peça conceito e save the date</span></div>
     <h2 class="rv">O líder diante <span class="serif">do próprio caminho.</span></h2>
-    <div class="flats">
-      <figure class="rv"><img data-lb="dir" src="projetos/pit-stop/post-escuro.jpg" alt="Peça conceito, versão escura: piloto de macacão branco entre rastros de luz azul" loading="lazy" width="1080" height="1350"><figcaption>Versão escura</figcaption></figure>
-      <figure class="rv"><img data-lb="dir" src="projetos/pit-stop/post-claro.jpg" alt="Peça conceito, versão clara: piloto caminhando pela pista curva em direção à subida" loading="lazy" width="1080" height="1350"><figcaption>Versão clara · escolhida</figcaption></figure>
-      <figure class="rv"><img data-lb="dir" src="projetos/pit-stop/save-the-date.jpg" alt="Save the date do primeiro encontro: 03.12, quinta-feira, das 10h às 12h, no Auditório HBO" loading="lazy" width="1080" height="1350"><figcaption>Save the date</figcaption></figure>
+    <div class="apps">
+      <div class="app wide rv"><figure>
+        <div class="im"><img class="zoom" data-lb="app" src="projetos/pit-stop/mock-cartazes.jpg" alt="Dois cartazes do Pit Stop da Liderança lado a lado em uma parede de concreto: peça conceito e save the date" loading="lazy" width="2400" height="1357"></div>
+        <figcaption><b>01</b><h3>Peça conceito e save the date</h3><p>A peça conceito lança o programa e o save the date convoca os líderes para o primeiro encontro, em 3 de dezembro.</p></figcaption>
+      </figure></div>
     </div>
     <div class="decisions">
-      <div class="dec rv"><span class="n">01</span><h3>O piloto como líder</h3><p>Um piloto de macacão branco, sozinho na pista, representa o líder no momento de parar e escolher o próximo trecho.</p></div>
+      <div class="dec rv"><span class="n">01</span><h3>O piloto como líder</h3><p>Um piloto de macacão branco, sozinho na pista curva, representa o líder no momento de parar e escolher o próximo trecho. As imagens foram criadas com IA generativa a partir da direção de arte.</p></div>
       <div class="dec rv"><span class="n">02</span><h3>Velocidade na tipografia</h3><p>“PIT STOP” em uma sans expandida, extra bold e itálica, que remete aos números e letreiros do automobilismo.</p></div>
-      <div class="dec rv"><span class="n">03</span><h3>No azul da marca</h3><p>Testei uma direção em vermelho, cor clássica das corridas, mas a campanha ficou no azul para conversar com a marca São Pietro.</p></div>
+      <div class="dec rv"><span class="n">03</span><h3>Claro e no azul da marca</h3><p>Cinzas de estúdio, névoa e luz azul: um universo claro e sereno, com o azul conversando com a marca São Pietro.</p></div>
     </div>
-    <div class="strip ia rv" style="grid-template-columns:repeat(4,1fr)">
-      <figure><img data-lb="ia" src="projetos/pit-stop/foto-escura.jpg" alt="Imagem criada com IA: piloto entre rastros de luz azul" loading="lazy" width="1200" height="1490"><figcaption>Base da versão escura</figcaption></figure>
-      <figure><img data-lb="ia" src="projetos/pit-stop/foto-clara.jpg" alt="Imagem criada com IA: piloto caminhando pela pista curva" loading="lazy" width="1200" height="1490"><figcaption>Base da versão clara</figcaption></figure>
-      <figure><img data-lb="ia" src="projetos/pit-stop/foto-clara-2.jpg" alt="Imagem criada com IA: piloto parado na pista curva com seta pintada no chão" loading="lazy" width="1200" height="1490"><figcaption>Variação de pose</figcaption></figure>
-      <figure><img data-lb="ia" src="projetos/pit-stop/foto-vermelha.jpg" alt="Imagem criada com IA: exploração em vermelho, piloto entre rastros de luz vermelha" loading="lazy" width="1200" height="1490"><figcaption>Exploração em vermelho</figcaption></figure>
-    </div>
-    <p class="prose rv" style="margin-top:clamp(28px,4vw,48px)"><span style="display:block;max-width:60ch;color:var(--muted);font-size:16px">Apresentei duas versões, uma escura e outra clara. A clara foi a escolhida e virou a base do save the date e da apresentação.</span></p>
   </section>
 
   <section class="block">
-    <div class="label"><b>03 ( Aplicações )</b><span>Cartazes e apresentação</span></div>
-    <h2 class="rv">Do convite <span class="serif">ao encontro.</span></h2>
-    <div class="apps">
-      <div class="app wide rv"><figure>
-        <div class="im"><img class="zoom" data-lb="app" src="projetos/pit-stop/mock-cartazes.jpg" alt="Dois cartazes do Pit Stop da Liderança lado a lado em uma parede de concreto: peça conceito clara e save the date" loading="lazy" width="2400" height="1357"></div>
-        <figcaption><b>01</b><h3>Peça conceito e save the date</h3><p>A versão clara lança o programa e o save the date convoca os líderes para o primeiro encontro, em 3 de dezembro.</p></figcaption>
-      </figure></div>
-      <div class="app wide rv"><figure>
-        <div class="im"><img class="zoom" data-lb="app" src="projetos/pit-stop/abertura-clara.jpg" alt="Tela de abertura do Pit Stop da Liderança em 16:9, com o título à esquerda e o piloto na pista à direita" loading="lazy" width="1920" height="1080"></div>
-        <figcaption><b>02</b><h3>Abertura da apresentação</h3><p>A identidade levada para o formato 16:9 da apresentação do programa, usada no telão do auditório.</p></figcaption>
-      </figure></div>
+    <div class="label"><b>03 ( Apresentação )</b><span>Apresentação 16:9</span></div>
+    <div class="two">
+      <h2 class="rv">Do convite <span class="serif">ao encontro.</span></h2>
+      <div class="prose rv">
+        <p>A identidade se desdobrou na apresentação do programa, usada no telão do auditório no primeiro encontro: proposta, direcionadores, programação, dinâmica de integração e fechamento.</p>
+        <p>Cada slide combina uma imagem da campanha com um layout limpo, para o conteúdo ficar legível de longe.</p>
+      </div>
+    </div>
+    <div class="slides">
+      <figure class=""><img data-lb="sl" src="projetos/pit-stop/slide-02.jpg" alt="Slide 01, a proposta: uma pausa estratégica para avançar" loading="lazy" width="1920" height="1080"><figcaption>Slide 01, a proposta</figcaption></figure>
+      <figure class=""><img data-lb="sl" src="projetos/pit-stop/slide-03.jpg" alt="Slide 02, direcionadores: o que queremos construir" loading="lazy" width="1920" height="1080"><figcaption>Slide 02, direcionadores</figcaption></figure>
+      <figure class=""><img data-lb="sl" src="projetos/pit-stop/slide-05.jpg" alt="Slide 03, programação: uma manhã para inspirar, conectar e comprometer" loading="lazy" width="1920" height="1080"><figcaption>Slide 03, programação</figcaption></figure>
+      <figure class=""><img data-lb="sl" src="projetos/pit-stop/slide-06.jpg" alt="Slide 04, dinâmica de integração: o que nos conecta?" loading="lazy" width="1920" height="1080"><figcaption>Slide 04, dinâmica de integração</figcaption></figure>
+      <figure class=""><img data-lb="sl" src="projetos/pit-stop/slide-07.jpg" alt="Slide 05, fechamento: o que queremos que cada líder leve consigo" loading="lazy" width="1920" height="1080"><figcaption>Slide 05, fechamento</figcaption></figure>
+      <figure class=""><img data-lb="sl" src="projetos/pit-stop/slide-08.jpg" alt="Slide final: grandes resultados começam com grandes lideranças" loading="lazy" width="1920" height="1080"><figcaption>Slide final</figcaption></figure>
     </div>
   </section>
 
   <section class="block">
     <div class="label"><b>04 ( Sistema visual )</b><span>Cores e tipografia</span></div>
-    <h2 class="rv">Asfalto, luz <span class="serif">e azul São Pietro.</span></h2>
+    <h2 class="rv">Névoa, asfalto <span class="serif">e azul São Pietro.</span></h2>
     <div class="swatches rv">
+      <div class="sw"><div style="background:#EEEFF0"></div><p>Névoa<span>#EEEFF0</span></p></div>
+      <div class="sw"><div style="background:#303439"></div><p>Grafite<span>#303439</span></p></div>
       <div class="sw"><div style="background:#121417"></div><p>Asfalto<span>#121417</span></p></div>
-      <div class="sw"><div style="background:#09111C"></div><p>Noite<span>#09111C</span></p></div>
       <div class="sw"><div style="background:#195B99"></div><p>Azul São Pietro<span>#195B99</span></p></div>
       <div class="sw"><div style="background:#36B3E8"></div><p>Azul-luz<span>#36B3E8</span></p></div>
-      <div class="sw"><div style="background:#EEEFF0"></div><p>Névoa<span>#EEEFF0</span></p></div>
     </div>
     <div class="typeimg rv">
       <div><small>Títulos · Archivo Expanded ExtraBold Italic</small><img src="projetos/pit-stop/tipo-archivo.jpg" alt="Amostra da fonte Archivo Expanded" loading="lazy"></div>
@@ -313,7 +327,7 @@ footer a:hover{color:#fff}
       <a class="btn o" href="mailto:diasdehelenadesign@gmail.com">diasdehelenadesign@gmail.com</a>
       <a class="btn o" href="https://wa.me/5551980593552" target="_blank" rel="noopener">WhatsApp</a>
     </div>
-    <div class="next-case"><a href="magno-moinhos.html">← Magno Moinhos</a><a href="seg-conecta.html">Conecta Empregos →</a></div>
+    <div class="next-case"><a href="sipat.html">← SIPAT 2026</a><a href="bapho.html">Bapho →</a></div>
     <footer>
       <span>© <span id="yr">2026</span> Helena Dias</span>
       <a href="#topo">Voltar ao topo ↑</a>
